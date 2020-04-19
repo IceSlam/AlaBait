@@ -13,6 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css" />
   <link href="../assets/alabayt/css/main.css" rel="stylesheet">
+  <link href="../assets/alabayt/css/media.css" rel="stylesheet">
 </head>
 
 <body>
@@ -179,10 +180,11 @@
                     aria-haspopup="true" aria-expanded="false">
                       Услуги
                     </a>
-                  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-menu dropdown-primary"  aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Линия Консультаций 1С</a>
+                    <a class="dropdown-item" href="#">1С в облаке</a>
+                    <a class="dropdown-item" href="#">Аренда сервера</a>
+                    <a style="z-index: 1001;" class="dropdown-item" href="#">Сопровождение 1С</a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -399,10 +401,10 @@
 
                 <div class="text-right">
                   <a href="#" uk-slidenav-previous uk-slider-item="previous" class="is-main__slider-navs">
-                    <img src="../assets/alabayt/img/arrow_left.png" alt="Слайд назад">
+                    <img class="is-main__slider-navs-img" src="../assets/alabayt/img/arrow_left.png" alt="Слайд назад">
                   </a>
                   <a href="#" uk-slidenav-next uk-slider-item="next" class="is-main__slider-navs">
-                    <img src="../assets/alabayt/img/arrow_right.png" alt="Слайд вперед">
+                    <img class="is-main__slider-navs-img" src="../assets/alabayt/img/arrow_right.png" alt="Слайд вперед">
                   </a>
                 </div>
               </div>
@@ -595,7 +597,7 @@
           <div class="col-sm-7 col-md-4 text-right">
             <a href="!#" class="btn is-services__title-btn">
               <span>
-                Смотреть все наши услуги
+                Смотреть все наши продукты
               </span>
               <span>
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -630,6 +632,7 @@
           <div class="col-md-7 col-lg-7 mb-5">
             <ul class="list-group is-products__list">
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   01
                 </span>
@@ -638,6 +641,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   02
                 </span>
@@ -646,6 +650,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   03
                 </span>
@@ -654,6 +659,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   04
                 </span>
@@ -662,6 +668,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   05
                 </span>
@@ -670,6 +677,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   06
                 </span>
@@ -678,6 +686,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   07
                 </span>
@@ -686,6 +695,7 @@
                 </span>
               </li>
               <li class="list-group-item">
+                <img src="../assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
                 <span>
                   08
                 </span>
@@ -948,7 +958,7 @@
           <div class="col-sm-7 col-md-4 text-right">
             <a href="!#" class="btn is-services__title-btn">
               <span>
-                Смотреть все наши услуги
+                Перейти в раздел "Клиенты"
               </span>
               <span>
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -980,7 +990,7 @@
         <div class="is-services__title-divider2">
         </div>
         <div class="row ">
-          <div class="is-col">
+          <div class="is-col col1">
             <div style="background-image: url(../assets/alabayt/img/clients_item1.png);" class="is-clients__card">
               <div class="card-bg0">
                 <div class="card-bg1">
@@ -996,7 +1006,7 @@
               </div>
             </div>
           </div>
-          <div class="is-col">
+          <div class="is-col col2">
             <div style="background-image: url(../assets/alabayt/img/clients_item2.png);" class="is-clients__card">
               <div class="card-bg0">
                 <div class="card-bg1">
@@ -1166,9 +1176,10 @@
                       Услуги
                     </a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Линия Консультаций 1С</a>
+                    <a class="dropdown-item" href="#">1С в облаке</a>
+                    <a class="dropdown-item" href="#">Аренда сервера</a>
+                    <a class="dropdown-item" href="#">Сопровождение 1С</a>
                   </div>
                 </li>
                 <li class="nav-item">
