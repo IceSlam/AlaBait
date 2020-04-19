@@ -1249,12 +1249,21 @@ div.is-footer__phone-r {
 
 /* Partners page */
 #pages {
-  background-image: url(../img/main_bg.webp);
+  background-image: url(../img/pages_bg.png);
   position: relative;
   background-position: bottom center;
   -webkit-background-size: cover;
   background-size: cover;
   height: 536px !important;
+}
+
+#partners {
+  background-image: url(../img/partners_bg.webp);
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 2162px !important;
 }
 
 .is-pages__navs {
@@ -1382,12 +1391,12 @@ div.is-footer__phone-r {
 }
 
 #partservices, #saling {
-  padding-top: 4em;
-  padding-bottom: 3em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 #mechfab {
-  padding-top: 4em;
+  padding-top: 5em;
   padding-bottom: 5em;
 }
 
