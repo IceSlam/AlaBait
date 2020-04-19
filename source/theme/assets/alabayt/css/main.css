@@ -1498,7 +1498,7 @@ div.is-footer__phone-r {
   padding-bottom: 5em;
 }
 
-.is-cases__main-plus h2 {
+.is-cases__main-plus h2, .is-cases__main-negative h2 {
   font-family: Montserrat,sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1508,7 +1508,7 @@ div.is-footer__phone-r {
   color: #182F44;
 }
 
-.is-cases__main-plus h2::before {
+.is-cases__main-plus h2::before, .is-cases__main-negative h2::before {
   content: '';
   background: #E76533;
   display: block;
@@ -1521,7 +1521,7 @@ div.is-footer__phone-r {
   margin-right: 20px;
 }
 
-.is-cases__main-plus .is-services__title {
+.is-cases__main-plus .is-services__title, .is-cases__main-negative .is-services__title {
   margin-bottom: 0 !important;
 }
 
@@ -1532,18 +1532,32 @@ div.is-footer__phone-r {
   color: #4C6579;
 }
 
-.is-cases__main-cardp {
+.is-cases__main-cardp, .is-cases__main-cardn {
   margin-bottom: 30px;
 }
 
-.is-cases__main-cardp .card {
+.is-cases__main-cardp .card, .is-cases__main-cardn .card {
   border: 8px solid #fff;
   max-height: 352px;
+  box-shadow: 0px 20px 40px rgba(134, 146, 168, 0.25);
+}
+
+.is-cases__main-cardn .card {
+  background-position: top right;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border: 0;
 }
 
 .is-cases__main-cardp-content {
     padding: 2em !important;
     max-height: 336px;
+}
+
+.is-cases__main-cardn-content {
+  padding: 2em !important;
+  max-height: 352px;
 }
 
 .is-cases__main-cardp .card h5 {
@@ -1565,6 +1579,24 @@ div.is-footer__phone-r {
   text-align: center;
 }
 
+.is-cases__main-cardn .card h5 {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: rgba(76, 101, 121, 0.15);
+  border-radius: 4px;
+  max-width: 84px;
+  min-height: 24px;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #4C6579 !important;
+  padding: 2px 0px;
+}
+
 .is-cases__main-cardp .card h3 {
   font-family: Montserrat;
   font-style: normal;
@@ -1577,9 +1609,28 @@ div.is-footer__phone-r {
   margin-top: 5.3125em;
 }
 
+.is-cases__main-cardn .card h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(24, 47, 68, 0.3);
+  white-space: pre-line;
+  margin-top: 5.3125em;
+  display: flex;
+align-items: flex-end;
+}
+
 .is-cases__main-cardp .card h3 a {
   text-decoration: none;
   color: #FFFFFF !important;
+}
+
+.is-cases__main-cardn .card h3 a {
+  text-decoration: none;
+  color: #182F44 !important;
 }
 
 .is-cases__main-cardp .card p {
@@ -1589,6 +1640,16 @@ div.is-footer__phone-r {
   font-size: 14px !important;
   line-height: 20px !important;
   color: #BFD6E9 !important;
+  margin-top: .75em;
+}
+
+.is-cases__main-cardn .card p {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #182F44 !important;
   margin-top: .75em;
 }
 
