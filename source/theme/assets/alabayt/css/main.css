@@ -1302,6 +1302,7 @@ div.is-footer__phone-r {
 
 .is-fabric {
   padding-top: 4em;
+  padding-bottom: 3em;
 }
 
 .is-fabric .is-services__title {
@@ -1314,4 +1315,68 @@ div.is-footer__phone-r {
   font-size: 29px;
   line-height: 43px;
   color: #182F44;
+}
+
+.is-fabric__main {
+
+}
+
+.is-fabric__main-slider {
+  background: linear-gradient(14.05deg, #FFFFFF 0%, #DFE7EF 121.44%);
+  box-shadow: 0px 20px 40px rgba(134, 146, 168, 0.25);
+  border-radius: 4px;
+  min-height: 256px;
+}
+
+.is-fabric__main-slider ul li {
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-right: 2px solid rgba(255,255,255,.75);
+  border-left: 2px solid rgba(255,255,255,.25);
+  border-radius: 4px;
+}
+
+.is-fabric__main-slider ul li img {
+  filter: saturate(0%);
+  transition: all 1.25s;
+  border-radius: 4px;
+}
+
+.is-fabric__main-slider ul li:hover img {
+  filter: saturate(100%);
+  transition: all 1.25s;
+}
+
+.is-fabric__main-slider .is-main__slider-navs {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6EDF3 100%);
+  mix-blend-mode: normal;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px rgba(37, 57, 73, 0.3);
+  border-radius: 4px;
+}
+
+.is-fabric__main-slider .is-main__slider-navs.fabric-nav-p {
+  margin-left: -4em;
+}
+
+.is-fabric__main-slider .is-main__slider-navs.fabric-nav-n {
+  margin-right: -4em;
+}
+
+.is-fabric__main-slider .is-main__slider-navs img {
+  margin-top: .25em;
+  margin-left: .25em;
+}
+
+#fabric .uk-slider-items {
+  overflow: hidden !important;
+}
+
+#fabric .uk-slider-container {
+  overflow: visible !important;
+}
+
+#fabric .uk-slider-items li {
+  overflow: hidden !important;
 }
