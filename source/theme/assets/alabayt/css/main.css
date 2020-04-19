@@ -1248,3 +1248,70 @@ div.is-footer__phone-r {
 }
 
 /* Partners page */
+#pages {
+  background-image: url(../img/main_bg.webp);
+  position: relative;
+  background-position: bottom center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 536px !important;
+}
+
+.is-pages__navs {
+  margin-top: 3em;
+}
+
+.is-pages__navs .breadcrumb {
+  background-color: transparent;
+  padding: .75rem 0rem 0em;
+}
+
+.is-pages__navs .breadcrumb li  {
+  color: #BFD6E9;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.is-pages__navs .breadcrumb li a {
+  color: #BFD6E9;
+  text-decoration: underline;
+}
+
+.is-pages__navs h2 {
+  font-family: Montserrat,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 57px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.is-pages__navs h2:after {
+  display: block;
+  content: "";
+  width: 32px;
+  margin-right: auto;
+  margin-top: 20px;
+  background: #E76533;
+  border-radius: 2px;
+  height: 4px;
+}
+
+.is-fabric {
+  padding-top: 4em;
+}
+
+.is-fabric .is-services__title {
+  margin-bottom: 0 !important;
+}
+
+.is-fabric h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 43px;
+  color: #182F44;
+}
