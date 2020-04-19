@@ -1380,3 +1380,28 @@ div.is-footer__phone-r {
 #fabric .uk-slider-items li {
   overflow: hidden !important;
 }
+
+#partservices {
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+
+.is-partservices {
+
+}
+
+.is-partservices .is-services__title {
+  margin-bottom: 0 !important;
+}
+
+#partservices .uk-slider-items {
+  overflow: hidden !important;
+}
+
+#partservices .uk-slider-container {
+  overflow: visible !important;
+}
+
+#partservices .uk-slider-items li {
+  overflow: hidden !important;
+}
