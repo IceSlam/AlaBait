@@ -1381,7 +1381,7 @@ div.is-footer__phone-r {
   overflow: hidden !important;
 }
 
-#partservices {
+#partservices, #saling {
   padding-top: 4em;
   padding-bottom: 3em;
 }
@@ -1394,14 +1394,14 @@ div.is-footer__phone-r {
   margin-bottom: 0 !important;
 }
 
-#partservices .uk-slider-items {
+#partservices .uk-slider-items, #saling .uk-slider-items {
   overflow: hidden !important;
 }
 
-#partservices .uk-slider-container {
+#partservices .uk-slider-container, #saling .uk-slider-container {
   overflow: visible !important;
 }
 
-#partservices .uk-slider-items li {
+#partservices .uk-slider-items li, #saling .uk-slider-items li {
   overflow: hidden !important;
 }
