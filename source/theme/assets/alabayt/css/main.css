@@ -1487,14 +1487,21 @@ div.is-footer__phone-r {
 }
 
 #cases-main {
-
+  background: url(../img/cases_bg.webp);
+  background-position: top right;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  max-height: 2864px !important;
+  height: 100%;
 }
 
 .is-cases__main {
   padding-top: 5em;
 }
 
-.is-cases__main-plus {
+.is-cases__main-plus, .is-cases__main-negative {
+  padding-top: 2em;
   padding-bottom: 5em;
 }
 
@@ -1701,4 +1708,151 @@ align-items: flex-end;
   height: 44px;
   width: 44px;
   display: inline-block;
+}
+
+.is-cases__main-form {
+  padding-top: 2em;
+  padding-bottom: 8em;
+}
+
+.is-cases__main-form-row {
+  padding: 15px;
+}
+
+.is-cases__main-form-col {
+  border: 3px solid #E54C33;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.is-cases__main-form-info {
+  border: 3px solid #fff;
+  border-radius: 1px;
+}
+
+.is-cases__main-form-info h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 40px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #242424;
+}
+
+.is-cases__main-form-info h2::after {
+  display: block;
+  content: "";
+  width: 2em;
+  margin-right: auto;
+  margin-top: .5em;
+  background: #E76533;
+  border-radius: 2px;
+  height: .25em;
+}
+
+.is-cases__main-form-info p {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #182F44;
+}
+
+.is-cases__main-form-info label {
+  margin-bottom: 0 !important;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  color: #242424;
+}
+
+.is-cases__main-form-info input, .is-cases__main-form-info textarea {
+  background: linear-gradient(180deg, rgba(204, 221, 233, 0.8) 0%, rgba(217, 232, 243, 0.8) 100%);
+  border: 2px solid #F3FAFF;
+  box-shadow: inset 0px 0px 6px #7EA5BE;
+  border-radius: 4px;
+  height: 36px;
+  font-size: .75em;
+}
+
+.is-cases__main-form-info textarea {
+  height: 88px !important;
+}
+
+.is-cases__main-form-info .custom-checkbox label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px !important;
+  line-height: 16px;
+  color: #4C6579;
+  margin-top: 5px;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+.is-cases__main-form-info .custom-checkbox label::after, .is-cases__main-form-info .custom-checkbox label::before {
+  background: linear-gradient(180deg, #E8EEF2 0%, #FFFFFF 42.19%);
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(24, 47, 68, 0.2);
+  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  margin-right: 1em;
+}
+
+.is-cases__main-form-info .custom-checkbox input[type="checkbox"]:checked ~ label::after {
+    content: '';
+    background: #ff8125;
+    border: 2px solid #ff8125;
+    background-image: none !important;
+    -webkit-box-shadow: inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
+    -moz-box-shadow:    inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
+    box-shadow:         inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
+}
+
+.is-cases__main-form-info button {
+  background: linear-gradient(84.45deg, #FF8225 3.04%, #FF6B22 99.99%);
+  box-shadow: 5px 10px 35px rgba(237, 121, 52, 0.3);
+  border-radius: 4px;
+  font-family: Montserrat,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 3px 10px rgba(24, 47, 68, 0.3);
+  max-height: 56px;
+  transition: all 1.25s;
+}
+
+.is-cases__main-form-info button:hover {
+  background: linear-gradient(84.45deg, #FF8F3C 3.04%, #FF7835 99.99%);
+  box-shadow: 5px 10px 35px rgba(237, 121, 52, 0.5);
+  border-radius: 4px;
+  color: #FFFFFF;
+  transition: 1.25s;
+}
+
+.is-cases__main-form-info input:focus,.is-cases__main-form-info textarea:focus {
+  border: 2px solid #FF8225;
+  background: linear-gradient(180deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
+  box-shadow: inset 0px 0px 6px #FFFFFF;
+  border-radius: 4px;
+}
+
+.is-cases__main-form-info input:hover,.is-cases__main-form-info textarea:hover {
+  background: linear-gradient(180deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
+  border: 2px solid #F3FAFF;
+  box-shadow: inset 0px 0px 6px #7EA5BE;
+  border-radius: 4px;
 }
