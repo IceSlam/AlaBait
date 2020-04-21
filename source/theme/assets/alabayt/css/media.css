@@ -4,268 +4,56 @@
 @media (max-width:1199px) {}
 
 
-/* Medai Queries on Main page */
-@media screen and (max-width:575px) {
-  .is-header__topnav {
-    display: none;
+/* Index page */
+
+@media (max-width:575px) {
+  #main {
+    height: auto !important;
   }
 
-  .is-header__logo {
-    justify-content: center;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    margin-top: 0;
-
+  #main .is-main__slider-nav-text {
+    margin-top: 2.25em;
   }
 
-  .is-header__logo-text  {
-    display: block;
-    margin-top: 1em;
+  #all .is-services {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
   }
 
-  .is-main__header-logo .navbar-nav {
-    display: grid;
-    justify-content: center;
-  }
-
-  .navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-      color: #000;
-      -webkit-transition: .35s;
-      transition: .35s;
-  }
-
-  .is-header__navbar-menu .nav-item .nav-link {
-      border-right: 0px !important;
-  }
-
-  #services {
-    padding-top: 2em;
+  .is-products__list .list-group-item {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+    align-items: center;
   }
 
   .is-products {
     padding-bottom: 3em;
   }
 
-  .is-status__items .col-xs-6 {
-    max-width: 50%;
-
-      text-align: center;
-      justify-content: center;
+  .is-company__card-list li {
   }
 
-  .is-clients .is-col {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    max-width: 50%;
-    min-height: 392px;
-    transition: all 1.5s;
-    margin-bottom: 1em;
+  .is-status__items div {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .is-col:hover {
-    max-width: 575px !important;
-    transition: all 1.5s;
+  #clients {
+    padding-bottom: 3em !important;
   }
 
-  .is-col:first-child:hover {
-    max-width: 575px !important;
-  }
-
-  .is-col:nth-child(2):hover ~ .is-col:nth-child(3),.is-col:nth-child(2):hover ~ .is-col:last-child {
-    max-width: 50% !important;
-  }
-
-  .is-col:nth-child(3):hover ~ .is-col:last-child {
-    max-width: 100%;
-  }
-
-  .is-col:last-child {
+  .is-clients .is-col, .is-clients .is-col:first-child, .is-clients .is-col:last-child:hover {
     max-width: 100% !important;
   }
-
-  .is-clients .is-col:hover  h4 {
-    display: block !important;
-    transition: all 1.5s;
-  }
-  @keyframes visibleText {
-  from {opacity: 0;}
-  50% {opacity: .5;}
-  to {opacity: 1;}
-  }
-
-
-  .is-clients .is-col:first-child {
-    max-width: 575px !important;
-  }
-
-  .is-footer__phone {
-    padding-left: 15px;
-  }
-
-  #footer .is-main__header-logo .col-md-2 {
-    margin-bottom: 1em;
-  }
-
 }
 
-@media screen and (max-width:767px) {
-  .is-header__topnav {
-    display: none;
-  }
-  .is-header__logo {
-    justify-content: center;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    margin-top: 0;
-
-  }
-
-  .is-header__logo-text  {
-    display: block;
-    margin-top: 1em;
-  }
-
-  .is-main__header-logo .navbar-nav {
-    display: grid;
-    justify-content: center;
-  }
-
-  .is-clients .is-col:first-child {
-    width: 100% !important;
-    max-width: 50% !important;
-  }
-
-  .is-clients .is-col {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    max-width: 50%;
-    min-height: 392px;
-    transition: all 1.5s;
-    margin-bottom: 1em;
-  }
-
-  .is-clients .is-col:hover {
-    max-width: 50% !important;
-    width: 100% !important;
-  }
-
-  .is-clients .is-col:nth-child(2) ~ .is-clients .is-col:nth-child(3),.is-clients .is-col:nth-child(2) ~ .is-clients .is-col:last-child(4) {
-    max-width: 50% !important;
-    width: 100% !important;
-  }
-
-  .is-footer__phone {
-    padding-left: 15px;
-  }
-
-  #footer .is-main__header-logo .col-md-2 {
-    margin-bottom: 1em;
-  }
-}
-
-@media screen and (max-width:991px) {
-  .is-header__topnav {
-    display: none;
-  }
-  .is-header__logo {
-    justify-content: center;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    margin-top: 0;
-
-  }
-
-  .is-header__logo-text  {
-    display: block;
-    margin-top: 1em;
-  }
-
-  .is-main__header-logo .navbar-nav {
-    display: grid;
-    justify-content: center;
-  }
-
-  .is-clients .is-col:first-child {
-    width: 100% !important;
-    max-width: 50% !important;
-  }
-
-  .is-clients .is-col {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    max-width: 50%;
-    min-height: 392px;
-    transition: all 1.5s;
-    margin-bottom: 1em;
-  }
-
-  .is-clients .is-col:hover {
-    max-width: 50% !important;
-    width: 100% !important;
-  }
-
-  .is-clients .is-col:nth-child(2) ~ .is-clients .is-col:nth-child(3),.is-clients .is-col:nth-child(2) ~ .is-clients .is-col:last-child(4) {
-    max-width: 50% !important;
-    width: 100% !important;
-  }
-
-  .is-footer__phone {
-    padding-left: 15px;
-  }
-
-  #footer .is-main__header-logo .col-md-2 {
-    margin-bottom: 1em;
-  }
-
-  #services {
-    padding-top: 2em;
-  }
-
-  .is-products {
-    padding-bottom: 3em;
-  }
-
-  .is-status__items .col-md-4 {
-    max-width: 50% !important;
-    text-align: center;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .is-clients .is-col:first-child {
-    width: 100% !important;
-    max-width: 25% !important;
-  }
-
-  .is-clients .is-col {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    max-width: 25%;
-    min-height: 392px;
-    transition: all 1.5s;
-    margin-bottom: 1em;
-  }
-
-  .is-clients .is-col:hover {
-    max-width: 25% !important;
-    width: 100% !important;
-  }
-
-  .is-clients .is-col:nth-child(2) ~ .is-clients .is-col:nth-child(3),.is-clients .is-col:nth-child(2) ~ .is-clients .is-col:last-child(4) {
-    max-width: 25% !important;
-    width: 100% !important;
-  }
-}
+@media (min-width:576px) and (max-width:767px) {}
+@media (max-width:991px) {}
+@media (max-width:1199px) {}
 
 /* Service details page */
+
 @media (max-width:575px) {
   #details {
     max-height: none !important;

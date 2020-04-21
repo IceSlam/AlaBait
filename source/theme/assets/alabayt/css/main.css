@@ -625,7 +625,6 @@ body {
 }
 
 .is-products__list .list-group-item img {
-
   display: none;
 }
 
@@ -645,7 +644,7 @@ body {
   font-size: 23px;
   line-height: 40px;
   text-align: center;
-  width: 61px;
+  width: 58px;
   text-transform: uppercase;
   color: #FF6B22;
   text-shadow: 0px 15px 10px rgba(255, 107, 34, 0.3);
@@ -676,7 +675,7 @@ body {
 }
 
 .is-products__list .list-group-item:hover span:nth-child(2) {
-  margin-left: -.5em;
+  margin-left: -.3em;
 }
 
 .is-products__form {
