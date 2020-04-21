@@ -714,7 +714,42 @@
   #cases-main .is-cases__main-form {
     padding-bottom: 3em !important;
   }
+
 }
 
-@media (max-width:991px) {}
+@media (max-width:991px) {
+
+  #cases-main {
+    padding-top: 2em;
+    max-height: none !important;
+  }
+
+  #cases-main .is-services__title .col-md-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .is-cases__main .is-services__title-divider2 {
+    margin-bottom: 3em !important;
+  }
+
+  .is-cases__main-cardp-content,.is-cases__main-cardn-content {
+    padding: 2em !important;
+    max-height: none !important;
+  }
+
+  .is-cases__main-cardp .card, .is-cases__main-cardn .card {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    max-height: none !important;
+  }
+
+  #cases-main .is-cases__main-form {
+    padding-bottom: 3em !important;
+  }
+
+}
+
 @media (max-width:1199px) {}
