@@ -1357,7 +1357,16 @@ div.is-footer__phone-r {
 }
 
 .is-fabric__main-slider .is-main__slider-navs {
-  background: linear-gradient(180deg, #FFFFFF 0%, #E6EDF3 100%);
+  background: linear-gradient(0deg, #FFFFFF 0%, #E6EDF3 100%);
+  mix-blend-mode: normal;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px rgba(37, 57, 73, 0.3);
+  border-radius: 4px;
+}
+
+.is-sdetails__page-other .is-main__slider-navs {
+  background: linear-gradient(0deg, #FFFFFF 0%, #E6EDF3 100%);
   mix-blend-mode: normal;
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
@@ -1374,6 +1383,11 @@ div.is-footer__phone-r {
 }
 
 .is-fabric__main-slider .is-main__slider-navs img {
+  margin-top: .25em;
+  margin-left: .25em;
+}
+
+.is-sdetails__page-other .is-main__slider-navs img {
   margin-top: .25em;
   margin-left: .25em;
 }
@@ -2076,7 +2090,7 @@ align-items: flex-end;
   margin-right: 2em;
 }
 
-.is-details__page-main-feature {
+.is-sdetails__page-main-feature {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: bold;
@@ -2149,4 +2163,52 @@ align-items: flex-end;
 
 .is-sdetails__main-page__table tbody tr:nth-child(even) {
   background: linear-gradient(0deg, rgba(10, 64, 114, 0.05) 0%, rgba(10, 73, 114, 0.025) 100%);;
+}
+
+.is-sdetails__page-other {
+  min-height: 786px !important;
+  background: url(../img/sdetails-other_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 5em;
+  margin-top: 5em;
+  padding-top: 5em;
+}
+
+.is-sdetails__page-other h2 {
+  font-family: Montserrat,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 57px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.is-sdetails__page-other h2::before {
+  content: '';
+  background: #E76533;
+  display: block;
+  border-radius: 2px;
+  width: 4px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 20px;
+}
+
+.is-sdetails__page-other .uk-slider-container {
+  overflow-y:auto;
+  min-height: 450px;
+}
+
+.is-sdetails__page-other .is-services__page-card, .is-sdetails__page-other .is-services__page-card a {
+  box-shadow: none;
+}
+
+#sdetails-page .is-cases__main-form {
+  padding-bottom: 5em;
 }
