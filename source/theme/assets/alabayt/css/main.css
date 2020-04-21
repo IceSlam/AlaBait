@@ -11,7 +11,7 @@ body {
 
 
 #main {
-  background-image: url(../img/main_bg.webp);
+  background-image: url(../img/main_bg.jpg) !important;
   position: relative;
   background-position: bottom center;
   -webkit-background-size: cover;
@@ -403,7 +403,7 @@ body {
 }
 
 .is-all {
-  background-image: url(../img/all_bg.webp);
+  background-image: url(../img/all_bg.jpg);
   background-position: top center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -741,7 +741,7 @@ body {
 
 .is-products__form-main input[type="name"]:focus,.is-products__form-main input[type="phone"]:focus,.is-products__form-main textarea:focus {
   border: 2px solid #FF8225;
-  background: linear-gradient(180deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
+  background: linear-gradient(0deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
   box-shadow: inset 0px 0px 6px #FFFFFF;
   border-radius: 4px;
 }
@@ -817,7 +817,7 @@ body {
 }
 
 .is-company {
-  background-image: url(../img/company_bg.png);
+  background-image: url(../img/company_bg.jpg);
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -880,7 +880,7 @@ body {
 }
 
 .is-company__btn-left span:last-child {
-  background: linear-gradient(180deg, #0A4472 0%, rgba(10, 68, 114, 0.4) 100%);
+  background: linear-gradient(0deg, #0A4472 0%, rgba(10, 68, 114, 0.4) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 3px 10px rgba(24, 47, 68, 0.3);
@@ -890,7 +890,7 @@ body {
 }
 
 .is-company__btn-left span:last-child:hover {
-  background: linear-gradient(180deg, rgba(10, 68, 114, 0.4) 0%, #0A4472 100%);
+  background: linear-gradient(0deg, rgba(10, 68, 114, 0.4) 0%, #0A4472 100%);
 }
 
 
@@ -1249,7 +1249,7 @@ div.is-footer__phone-r {
 
 /* Partners page */
 #pages {
-  background-image: url(../img/pages_bg.png);
+  background-image: url(../img/pages_bg.jpg);
   position: relative;
   background-position: bottom center;
   -webkit-background-size: cover;
@@ -1258,7 +1258,7 @@ div.is-footer__phone-r {
 }
 
 #partners {
-  background-image: url(../img/partners_bg.webp);
+  background-image: url(../img/partners_bg.jpg);
   background-position: top center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -1437,7 +1437,7 @@ div.is-footer__phone-r {
 /* Cases page */
 
 #cases {
-  background-image: url(../img/cases_header-bg.webp);
+  background-image: url(../img/cases_header-bg.jpg);
   position: relative;
   background-position: bottom center;
   -webkit-background-size: cover;
@@ -1446,7 +1446,7 @@ div.is-footer__phone-r {
 }
 
 #details {
-  background-image: url(../img/cases_header-bg.webp);
+  background-image: url(../img/cases_header-bg.jpg);
   position: relative;
   background-position: bottom center;
   -webkit-background-size: cover;
@@ -1511,7 +1511,7 @@ div.is-footer__phone-r {
 }
 
 #cases-main {
-  background: url(../img/cases_bg.webp);
+  background: url(../img/cases_bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -1883,7 +1883,7 @@ align-items: flex-end;
 
 /* Services page */
 #services-page {
-  background-image: url(../img/services-page_bg.png);
+  background-image: url(../img/services-page_bg.jpg);
   background-position: top right;
   -webkit-background-size: cover;
   background-size: cover;
@@ -2039,7 +2039,7 @@ align-items: flex-end;
 }
 
 .is-sdetails__page {
-  background-image: url(../img/sdetails_bg.png);
+  background-image: url(../img/sdetails_bg.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
