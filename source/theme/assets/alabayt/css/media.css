@@ -573,3 +573,40 @@
     height: 100% !important;
   }
 }
+
+/* Services page */
+
+@media (max-width:575px) {
+
+  .is-services__page-main {
+    padding-top: 3em !important;
+
+  .is-services__page-main .is-services__page-card .row {
+    display: block !important;
+  }
+
+  .is-services__page-main .is-services__page-card__info h3 {
+    margin-top: 2em !important;
+  }
+
+  .is-services__page-main .is-services__page-card__bg0 {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+  }
+
+  .is-services__page-main .is-services__page-card__mask {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    border-bottom-right-radius: 4px !important;
+  }
+
+  .is-services__page-main .is-services__page-card__info .btn {
+    margin-bottom: -3.5em !important;
+    margin-top: 0em;
+  }
+}
+
+@media (min-width:576px) and (max-width:767px) {}
+@media (max-width:991px) {}
+@media (max-width:1199px) {}
