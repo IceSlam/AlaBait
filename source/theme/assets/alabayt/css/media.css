@@ -757,4 +757,85 @@
     padding-top: 2em;
     max-height: none !important;
   }
+
+  .is-cases__main-cardp-content,.is-cases__main-cardn-content {
+    padding: 2em !important;
+    max-height: none !important;
+  }
+
+  .is-cases__main-cardp .card, .is-cases__main-cardn .card {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    max-height: none !important;
+  }
+
+  #cases-main .is-cases__main-plus, .is-cases__main-negative {
+    padding-bottom: 2em !important;
+  }
+
+  #cases-main .is-cases__main-form {
+    padding-bottom: 3em !important;
+  }
+
 }
+
+/* Partners page */
+
+@media (max-width:575px) {
+  #pages {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 1em;
+  }
+
+  #partners {
+    max-height: none !important;
+  }
+
+  #partners #fabric {
+    padding-top: 2em !important;
+    padding-bottom: 0em !important;
+  }
+
+  #fabric .is-services__title-btn {
+    margin-bottom: 2em;
+  }
+
+  #partners .fabric-nav-p {
+    margin-left: 0 !important;
+  }
+
+  #partners .fabric-nav-n {
+    margin-right: 0 !important;
+  }
+
+  #partners .is-fabric__main-slider {
+    min-height: auto !important;
+  }
+
+  #partservices, #saling {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+
+  #partservices .is-services__title-btn, #saling .is-services__title-btn {
+    margin-top: 0em !important;
+    margin-bottom: 2em !important;
+  }
+
+  #saling .is-services__title {
+    margin-bottom: 0em !important;
+  }
+
+  #mechfab {
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+
+}
+
+@media (min-width:576px) and (max-width:767px) {}
+@media (max-width:991px) {}
+@media (max-width:1199px) {}
