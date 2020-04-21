@@ -352,6 +352,18 @@
     margin-top: 2em !important;
   }
 
+  .is-sdetails__page-other .is-services__page-card__bg0 {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__mask {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    border-bottom-right-radius: 4px !important;
+  }
+
   .is-cases__main-form-info .custom-checkbox {
     margin-bottom: 1em !important;
   }
@@ -376,7 +388,96 @@
   }
 }
 
-@media (max-width:767px) {}
+@media (max-width:767px) {
+  #details {
+    max-height: none !important;
+    padding-bottom: 2em;
+  }
+
+  .is-details__header__btn-buy {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+
+  .is-details .is-cases__navs video {
+    margin-top: 1em !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .is-sdetails__page-main {
+    padding-top: 3em !important;
+  }
+
+  .is-sdetails__page-main-description {
+    margin-bottom: 3em !important;
+  }
+
+  .is-sdetails__page-other .is-services__title-divider2 {
+    margin-bottom: 1em !important;
+  }
+
+  .is-sdetails__page-main-features {
+    margin-top: 2em !important;
+    margin-bottom: 3em;
+  }
+
+  .is-sdetails__page-other {
+    margin-top: 3em;
+    padding-top: 3em !important;
+    min-height: auto !important;
+    margin-bottom: 2em !important;
+  }
+
+  .is-sdetails__page-other .is-services__title-divider2 {
+    margin-bottom: 3em !important;
+  }
+
+  .is-sdetails__page-other .uk-grid {
+    margin-left: 0px !important;
+    margin-right: 30px !important;
+  }
+
+  .is-sdetails__page-other [class*=uk-child-width]>* {
+   box-sizing:border-box;
+   width:100% !important;
+  }
+
+  .is-sdetails__page-other .uk-slider-items {
+    height: 100% !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__info .btn {
+    font-size: 13px !important;
+    margin-top: 1em !important;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 89.66%) !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__info .btn:hover {
+    color: #F66F1A;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__bg0 {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__mask {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    border-bottom-right-radius: 4px !important;
+  }
+
+  .is-cases__main-form-info img {
+    margin-top: 0em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+}
 
 @media (max-width:991px) {}
 
