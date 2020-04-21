@@ -935,4 +935,48 @@
   }
 }
 
-@media (max-width:1199px) {}
+@media (max-width:1199px) {
+  #partners {
+    max-height: none !important;
+  }
+
+  #partners #fabric {
+    padding-top: 2em !important;
+    padding-bottom: 0em !important;
+  }
+
+  #fabric .is-services__title-btn {
+    margin-bottom: 2em;
+  }
+
+  #partners .fabric-nav-p {
+    margin-left: 0 !important;
+  }
+
+  #partners .fabric-nav-n {
+    margin-right: 0 !important;
+  }
+
+  #partners .is-fabric__main-slider {
+    min-height: auto !important;
+  }
+
+  #partservices, #saling {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+
+  #partservices .is-services__title-btn, #saling .is-services__title-btn {
+    margin-top: 0em !important;
+    margin-bottom: 2em !important;
+  }
+
+  #saling .is-services__title {
+    margin-bottom: 0em !important;
+  }
+
+  #mechfab {
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+}
