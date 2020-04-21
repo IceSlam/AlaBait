@@ -48,8 +48,127 @@
   }
 }
 
-@media (min-width:576px) and (max-width:767px) {}
-@media (max-width:991px) {}
+@media (min-width:576px) and (max-width:767px) {
+  #main {
+    height: auto !important;
+  }
+
+  #main .is-main__slider-nav-text {
+    margin-top: 2.25em;
+  }
+
+  #services {
+    padding-top: 3em !important;
+  }
+
+  #products {
+    padding-bottom: 3em !important;
+  }
+
+  #products .is-services__title .col-sm-5 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  #products .is-services__title .col-sm-7 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .is-products__list .list-group-item {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+    align-items: center;
+  }
+
+  #clients .is-clients__title .col-sm-5 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  #clients .is-clients__title .col-sm-7 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .is-clients .is-col, .is-clients .is-col:first-child, .is-clients .is-col:last-child:hover {
+    max-width: 50% !important;
+  }
+
+  #clients {
+    padding-bottom: 3em !important;
+  }
+}
+
+@media (max-width:991px) {
+  #main {
+    height: auto !important;
+  }
+
+  #main .is-main__slider-nav-text {
+    margin-top: 2.25em;
+  }
+
+  #services {
+    padding-top: 3em !important;
+  }
+
+  #products {
+    padding-bottom: 3em !important;
+  }
+
+  #products .is-services__title .col-sm-5 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  #products .is-services__title .col-sm-7 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .is-products__list .list-group-item {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+    align-items: center;
+  }
+
+  .is-status__items .col-xs-6 {
+    max-width: 50%;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  #clients .is-clients__title .col-sm-5 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  #clients .is-clients__title .col-sm-7 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .is-clients .is-col, .is-clients .is-col:first-child, .is-clients .is-col:last-child:hover {
+    max-width: 50% !important;
+  }
+
+  #clients {
+    padding-bottom: 3em !important;
+  }
+}
+
 @media (max-width:1199px) {}
 
 /* Service details page */
