@@ -282,6 +282,16 @@ body {
 
 }
 
+.is-main__slider .uk-card-default {
+  background: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.is-main__slider .uk-card-default .uk-card-body {
+  padding: 0;
+}
+
 .is-main__slider h2 {
   font-family: Montserrat,sans-serif;
   font-style: normal;
@@ -317,6 +327,10 @@ body {
   padding-bottom: 0 !important;
 }
 
+.is-main__slider .text-right {
+  margin-top: 2em;
+}
+
 .is-main__slider-btn-more {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -346,6 +360,19 @@ body {
 .is-main__slider-btn-more:hover {
   -webkit-box-shadow: none;
   background: linear-gradient(84.64deg, #FF6B22 99.99%, #FF8225 3.04%);
+}
+
+.is-main__slider .uk-slider-nav {
+  margin-top: -2em !important;
+}
+
+.is-main__slider .uk-slider-nav li a {
+  border: 2px solid #fff !important;
+}
+
+.is-main__slider .uk-dotnav > .uk-active > * {
+  background-color: #fff !important;
+  border-color: transparent;
 }
 
 .is-main__slider-nav-text {
