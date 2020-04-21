@@ -580,6 +580,7 @@
 
   .is-services__page-main {
     padding-top: 3em !important;
+  }
 
   .is-services__page-main .is-services__page-card .row {
     display: block !important;
@@ -607,6 +608,12 @@
   }
 }
 
-@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:576px) and (max-width:767px) {
+  #services-page .is-services__page-main {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+  }
+}
+
 @media (max-width:991px) {}
 @media (max-width:1199px) {}
