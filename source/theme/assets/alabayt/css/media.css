@@ -752,4 +752,9 @@
 
 }
 
-@media (max-width:1199px) {}
+@media (max-width:1199px) {
+  #cases-main {
+    padding-top: 2em;
+    max-height: none !important;
+  }
+}
