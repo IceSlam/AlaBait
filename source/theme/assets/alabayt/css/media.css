@@ -695,6 +695,26 @@
 
 }
 
-@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:576px) and (max-width:767px) {
+  #cases {
+    height: auto !important;
+    padding-bottom: 2em;
+  }
+
+  #cases-main {
+    max-height: none !important;
+    padding-top: 2em !important;
+  }
+
+  .is-cases__main-plus, .is-cases__main-negative {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  #cases-main .is-cases__main-form {
+    padding-bottom: 3em !important;
+  }
+}
+
 @media (max-width:991px) {}
 @media (max-width:1199px) {}
