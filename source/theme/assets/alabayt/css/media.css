@@ -1,3 +1,9 @@
+@media (max-width:575px) {}
+@media (max-width:767px) {}
+@media (max-width:991px) {}
+@media (max-width:1199px) {}
+
+
 /* Medai Queries on Main page */
 @media screen and (max-width:575px) {
   .is-header__topnav {
@@ -258,3 +264,120 @@
     width: 100% !important;
   }
 }
+
+/* Service details page */
+@media (max-width:575px) {
+  #details {
+    max-height: none !important;
+    padding-bottom: 2em;
+  }
+
+  .is-details__header__btn-buy {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+    margin-top: 1em !important;
+  }
+
+  .is-details__header__btn-buy span:nth-child(1) {
+    margin-top: .75em !important;
+  }
+
+  .is-details__header__btn-buy span:nth-child(2) {
+    margin-top: -.25em !important;
+  }
+
+  .is-details .is-cases__navs video {
+    margin-top: 3em !important;
+  }
+
+  .is-sdetails__page-main {
+    padding-top: 3em !important;
+  }
+
+  .is-sdetails__page-main-description {
+    margin-bottom: 3em !important;
+  }
+
+  .is-sdetails__page-main .is-services__title-divider2 {
+    margin-bottom: 1em !important;
+  }
+
+  .is-sdetails__page-main-features {
+    margin-top: 2em;
+    margin-bottom: 3em !important;
+  }
+
+  .is-sdetails__page-other {
+    margin-top: 0 !important;
+    padding-top: 3em !important;
+    margin-bottom: 2em !important;
+  }
+
+  .is-sdetails__page-other .is-services__title-divider2 {
+    margin-bottom: 3em !important;
+  }
+
+  .is-sdetails__page-other .uk-grid {
+    margin-left: 0px !important;
+    margin-right: 30px !important;
+  }
+
+  .is-sdetails__page-other [class*=uk-child-width]>* {
+   box-sizing:border-box;
+   width:100% !important;
+  }
+
+  .is-sdetails__page-other .uk-slider-items {
+    min-height: 750px !important;
+    height: 100% !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__info .btn {
+    font-size: 10px !important;
+    margin-top: 0em !important;
+    margin-bottom: -4.25em !important;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 89.66%) !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__info .btn:hover {
+    color: #F66F1A;
+  }
+
+  .is-sdetails__page-other .is-services__page-card .row {
+    display: block !important;
+  }
+
+  .is-sdetails__page-other .is-services__page-card__info h3 {
+    margin-top: 2em !important;
+  }
+
+  .is-cases__main-form-info .custom-checkbox {
+    margin-bottom: 1em !important;
+  }
+
+  .is-sdetails__form-btns {
+    display: block !important;
+  }
+
+  .is-sdetails__form-btns button {
+    margin-bottom: 1em !important;
+  }
+
+  .is-cases__main-form-info img {
+    margin-top: 0em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  #sdetails-page .is-cases__main-form {
+    padding-bottom: 2em !important;
+  }
+}
+
+@media (max-width:767px) {}
+
+@media (max-width:991px) {}
+
+@media (max-width:1199px) {}
