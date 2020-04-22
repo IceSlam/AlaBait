@@ -14,6 +14,10 @@
     margin-left: 10px !important;
   }
 
+  #header .is-main__header-logo .row .col-md-6:last-child span .btn {
+    margin-left: 10px !important;
+  }
+
   #header .is-header__logo svg, #header .is-header__logo span {
     display: block !important;
     margin-left: auto !important;
@@ -84,6 +88,10 @@
   }
 
   #header .is-header__btns .btn {
+    margin-left: 10px !important;
+  }
+
+  #header .is-main__header-logo .row .col-md-6:last-child span .btn {
     margin-left: 10px !important;
   }
 
