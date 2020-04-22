@@ -1401,11 +1401,9 @@ div.is-footer__phone-r {
 }
 
 .is-fabric__main-slider .is-main__slider-navs.fabric-nav-p {
-  margin-left: -4em;
 }
 
 .is-fabric__main-slider .is-main__slider-navs.fabric-nav-n {
-  margin-right: -4em;
 }
 
 .is-fabric__main-slider .is-main__slider-navs img {
@@ -1423,7 +1421,6 @@ div.is-footer__phone-r {
 }
 
 #fabric .uk-slider-container {
-  overflow: visible !important;
 }
 
 #fabric .uk-slider-items li {
@@ -1453,7 +1450,6 @@ div.is-footer__phone-r {
 }
 
 #partservices .uk-slider-container, #saling .uk-slider-container, #mechfab .uk-slider-container {
-  overflow: visible !important;
 }
 
 #partservices .uk-slider-items li, #saling .uk-slider-items li, #mechfab .uk-slider-items li {
