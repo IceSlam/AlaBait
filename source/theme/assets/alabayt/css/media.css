@@ -203,7 +203,6 @@
   }
 
 }
-@media (max-width:1199px) {}
 
 /* Index page */
 
@@ -306,7 +305,7 @@
   }
 }
 
-@media (max-width:768px) and (max-width:991px)  {
+@media (min-width:768px) and (max-width:991px)  {
   #main {
     height: auto !important;
   }
@@ -361,8 +360,12 @@
     flex: auto !important;
   }
 
-  .is-clients .is-col, .is-clients .is-col:first-child, .is-clients .is-col:last-child:hover {
-    max-width: 50% !important;
+  .is-clients .is-col:first-child {
+    max-width: 25% !important;
+  }
+
+  .is-clients .is-col, .is-clients .is-col:last-child:hover {
+    max-width: 25% !important;
   }
 
   #clients {
@@ -370,7 +373,7 @@
   }
 }
 
-@media (max-width:992px) and (max-width:1199px)  {
+@media (min-width:992px) and (max-width:1199px)  {
   #main {
     height: auto !important;
   }
