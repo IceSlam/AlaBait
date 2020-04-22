@@ -35,7 +35,7 @@ body {
 
 .is-header {
   position: relative;
-  z-index: 2;
+  z-index: 1001;
 }
 
 #topnav {
@@ -206,7 +206,7 @@ body {
 }
 
 .is-header__navbar {
-  background: linear-gradient(180deg, #CADAEA 0%, #F3FAFF 100%);
+  background: linear-gradient(0deg, #CADAEA 0%, #F3FAFF 100%);
   box-shadow: 5px 25px 45px rgba(168, 171, 184, 0.3);
   border-radius: 4px;
   border: 2px solid rgba(255,255,255,.9);

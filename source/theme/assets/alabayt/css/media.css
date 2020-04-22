@@ -1,8 +1,78 @@
-@media (max-width:575px) {}
+/* Headers and Navbars */
+
+@media (max-width:575px) {
+  #topnav {
+    display: none;
+  }
+
+  #header .is-header__logo {
+    display: block;
+    margin-top: 0em;
+  }
+
+  #header .is-header__btns .btn {
+    margin-left: 10px !important;
+  }
+
+  #header .is-header__logo svg, #header .is-header__logo span {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  #header .is-header__logo span {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #header .is-header__navbar-menu .nav-item .nav-link {
+    border-right: none !important;
+  }
+
+  #header .is-header__navbar-menu .dropdown-menu {
+    background: linear-gradient(0deg, #CADAEA 0%, #F3FAFF 100%);
+  }
+
+  #footer .is-header__logo {
+    display: block;
+    margin-top: 0em;
+  }
+
+  #footer .is-header__logo svg, #footer .is-header__logo span {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #footer .is-header__btn  {
+    margin-left: 10px !important;
+  }
+
+  #footer .is-footer__phone, #footer .is-footer__phone-r {
+    padding-left: 15px;
+    padding-bottom: 1em;
+  }
+
+  #footer .is-footer__phone span, #footer .is-footer__phone-r span {
+    display: block;
+  }
+
+  #footer .is-footer__phone a, #footer .is-footer__phone-r a {
+    display: block;
+  }
+
+  #footer .is-header__navbar-menu .dropdown-menu {
+    background: linear-gradient(0deg, #CADAEA 0%, #F3FAFF 100%);
+  }
+}
+
 @media (min-width:576px) and (max-width:767px) {}
 @media (max-width:991px) {}
 @media (max-width:1199px) {}
-
 
 /* Index page */
 
@@ -169,7 +239,54 @@
   }
 }
 
-@media (max-width:1199px) {}
+@media (max-width:1199px) {
+  #main {
+    height: auto !important;
+  }
+
+  #main .is-main__slider-nav-text {
+    margin-top: 2.25em;
+  }
+
+  #services {
+    padding-top: 3em !important;
+  }
+
+  #products {
+    padding-bottom: 3em !important;
+  }
+
+  #products .is-services__title .col-sm-5 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  #products .is-services__title .col-sm-7 {
+    width: 100% !important;
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .is-products__list .list-group-item {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+    align-items: center;
+  }
+
+  .is-clients .is-col:first-child {
+    max-width: 25% !important;
+  }
+
+  .is-clients .is-col, .is-clients .is-col:last-child:hover {
+    max-width: 25% !important;
+  }
+
+  #clients {
+    padding-bottom: 3em !important;
+  }
+}
 
 /* Service details page */
 
