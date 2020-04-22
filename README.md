@@ -1,2 +1,2 @@
-## AlaBait Company - WordPress Theme
+# AlaBait Company - WordPress Theme
 
