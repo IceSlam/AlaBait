@@ -404,7 +404,7 @@ body {
 }
 
 .is-main__slider-navs {
-  background: linear-gradient(180deg, rgba(17,96,147, 0.3) 0%, rgba(17,96,147, 0.49375) 55.37%, rgba(17,96,147, 0.7) 100%);
+  background: linear-gradient(0deg, rgba(17,96,147, 0.3) 0%, rgba(17,96,147, 0.49375) 55.37%, rgba(17,96,147, 0.7) 100%);
   mix-blend-mode: soft-light;
   border: 2px solid rgba(17,96,147,.45);
   box-sizing: border-box;
