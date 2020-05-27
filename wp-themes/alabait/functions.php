@@ -20,6 +20,79 @@ if ( ! function_exists( 'alabait_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+
+/* ======= Theme Plugins AutoInstallation ======= */
+
+	 require_once dirname(__FILE__).'/class-tgm-plugin-activation.php';
+ add_action('tgmpa_register','my_theme_register_required_plugins');
+ function my_theme_register_required_plugins(){
+   $plugins = array(
+     /* AutoInstall from WP Repo */
+     array(
+     'name' => 'Yoast SEO',
+     'slug' => 'wordpress-seo',
+     ),
+     array(
+     'name' => 'Contact Form 7',
+     'slug' => 'contact-form-7',
+     ),
+     array(
+     'name' => 'Duplicate Post',
+     'slug' => 'duplicate-post',
+     ),
+       array(
+     'name' => 'Duplicator – WordPress Migration Plugin',
+     'slug' => 'duplicator',
+     ),
+         array(
+     'name' => 'TinyMCE Advanced',
+     'slug' => 'tinymce-advanced',
+     ),
+
+     /* AutoInstall from Theme Repo */
+		 	array(
+		 'name' => 'Advanced Custom Fields PRO',
+		 'slug' => 'advanced-custom-fields',
+		 'source' => get_stylesheet_directory().'/plugins/acf-pro.zip',
+		 'required' => true,
+		 ),
+     		array(
+     'name' => 'Advanced Custom Fields: Gallery Field',
+     'slug' => 'acf-gallery',
+     'source' => get_stylesheet_directory().'/plugins/acf-gallery.zip',
+     'required' => true,
+     ),
+         array(
+     'name' => 'Advanced Custom Fields: Options Page',
+     'slug' => 'acf-options-page',
+     'source' => get_stylesheet_directory().'/plugins/acf-options-page.zip',
+     'required' => true,
+     ),
+        array(
+     'name' => 'Advanced Custom Fields: Repeater Field',
+     'slug' => 'acf-repeater',
+     'source' => get_stylesheet_directory().'/plugins/acf-repeater.zip',
+     'required' => true,
+     ),
+
+		 array(
+    'name' => 'Cyr to Lat Enhanced',
+    'slug' => 'cyr3lat',
+		'source' => get_stylesheet_directory().'/plugins/cyr3lat.zip',
+		'required' => true,
+    ),
+   );
+
+   $theme_text_domain = 'alabait'; // текстовый домен темы
+     $config = array(
+     'settings' => array(
+     ),
+   );
+   tgmpa( $plugins, $config );
+ }
+
+/* =====================================================*/
+
 	function alabait_setup() {
 		/*
 		 * Make theme available for translation.
