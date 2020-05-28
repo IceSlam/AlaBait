@@ -16,7 +16,7 @@ body {
   background-position: bottom center;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 826px !important;
+  padding-bottom: 1em;
 }
 
 .is-main {
@@ -88,13 +88,16 @@ body {
 }
 
 .is-main__header-soc  .is-main__header-soc-i1 {
-  padding: 4px 4px !important;
-  bxs
+  padding: 4px 7px !important;
+}
+
+
+.is-main__header-soc:nth-child(2) .is-main__header-soc-i1 {
+  padding: 4px 7px !important;
 }
 
 .is-main__header-soc  .is-main__header-soc-i2 {
   padding: 4px 7px !important;
-  bxs
 }
 
 .is-main__header-soc  .is-main__header-soc-i3 {
