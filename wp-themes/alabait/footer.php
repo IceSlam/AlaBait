@@ -45,7 +45,7 @@
 						</svg>
 						Телефон
 					</span>
-					<a href="tel:+73852720560">+ 7 3852 720 560</a>
+					<a href="tel:<?php echo get_field("company_phone", 26); ?>"><?php echo get_field("company_phone", 26); ?></a>
 				</div>
 				<div class="col-md-2 text-center align-middle is-footer__phone-r">
 					<span>
@@ -60,7 +60,7 @@
 						</svg>
 						Телефон, WhatsApp
 					</span>
-					<a href="tel:+ 79050845132">+ 7 905 084 5132</a>
+					<a href="tel:<?php echo get_field("company_whatsapp", 26); ?>"><?php echo get_field("company_whatsapp", 26); ?></a>
 				</div>
 			<div class="col-md-3">
 				<span class="navbar-nav ml-auto">
@@ -166,25 +166,25 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 			<ul style="margin-left:0em;" class="navbar-nav mr-auto justify-center text-center">
 				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="./">
+					<a class="nav-link waves-effect waves-light" href="https://yandex.ru/maps/-/CCQsqPFZdB">
 						<i class="fas fa-map-marker-alt"></i>
 						<span>
-							г. Барнаул, ул.Малахова 179, офис 227
+							<?php echo get_field("company_address", 26);?>
 						</span>
 					</a>
 				</li>
 				<li class="nav-item" style="margin-left: 110px;">
-					<a class="nav-link waves-effect waves-light" href="mailto:sale@alabait.ru">
+					<a class="nav-link waves-effect waves-light" href="mailto:<?php echo get_field("company_email", 26);?>">
 						<i class="far fa-envelope"></i>
 						<span>
-							sale@alabait.ru
+							<?php echo get_field("company_email", 26);?>
 						</span>
 					</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav mx-auto nav-flex-icons" style="margin-top: 0;">
 				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="!#">
+					<a class="nav-link waves-effect waves-light" href="<?php echo get_permalink(26);?>">
 						<i class="fas fa-search is-main__header-search-i" style="display: inline-block;"></i>
 						<span style="text-decoration: underline;">
 							Поиск по сайту
@@ -198,31 +198,14 @@
 						Наши соц. сети
 					</a>
 				</li>
+				<?php while ( have_rows('company_social', 26) ) : the_row(); ?>
 				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="https://vk.com/bookservice">
-						<i class="fab fa-instagram is-main__header-soc-i1"></i>
+					<a class="nav-link waves-effect waves-light" href="<?php the_sub_field('link'); ?>">
+						<i class="fab fa-<?php the_sub_field('icon'); ?> is-main__header-soc-i1"></i>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="https://instagram.com/bookservice32">
-						<i class="fab fa-odnoklassniki is-main__header-soc-i2"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="https://yandex.ru/profile/224999423360">
-						<i class="fab fa-facebook-f is-main__header-soc-i3"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="https://yandex.ru/profile/224999423360">
-						<i class="fab fa-vk is-main__header-soc-i4"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="https://yandex.ru/profile/224999423360">
-						<i class="fab fa-telegram-plane is-main__header-soc-i5"></i>
-					</a>
-				</li>
+						<li class="wow slideInUp"><?php the_sub_field('tekst'); ?></li>
+				<?php endwhile; ?>
 			</ul>
 			</div>
 		</div>
