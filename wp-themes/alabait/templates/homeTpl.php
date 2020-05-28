@@ -89,7 +89,7 @@ get_header();
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a href="!#" class="btn is-services__title-btn">
+            <a href="<? echo get_category_link(4); ?>" class="btn is-services__title-btn">
               <span>
                 Смотреть все наши услуги
               </span>

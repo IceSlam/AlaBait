@@ -29,18 +29,42 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <ul style="margin-left:0em;" class="navbar-nav mr-auto justify-center text-center">
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="https://yandex.ru/maps/-/CCQsqPFZdB">
+                <a class="nav-link waves-effect waves-light"
+                href="
+                  <?
+                  $alabait_address_link = get_option( 'alabait_address_link' );
+                   if ($alabait_address_link) {
+                    echo get_option( 'alabait_address_link' );
+                    }
+                  ?>
+                " target="_blank">
                   <i class="fas fa-map-marker-alt"></i>
                   <span>
-										<?php echo get_field("company_address", 26);?>
+                    <?
+                    $alabait_address = get_option( 'alabait_address' );
+                     if ($alabait_address) {
+                      echo get_option( 'alabait_address' );
+                      }
+                    ?>
                   </span>
                 </a>
               </li>
               <li class="nav-item" style="margin-left: 110px;">
-                <a class="nav-link waves-effect waves-light" href="mailto:<?php echo get_field("company_email", 26);?>">
+                <a class="nav-link waves-effect waves-light" href="mailto:<?
+                $alabait_email = get_option( 'alabait_email' );
+                 if ($alabait_email) {
+                  echo get_option( 'alabait_email' );
+                  }
+                ?>
+                ">
                   <i class="far fa-envelope"></i>
                   <span>
-                    <?php echo get_field("company_email", 26);?>
+                    <?
+                    $alabait_email = get_option( 'alabait_email' );
+                     if ($alabait_email) {
+                      echo get_option( 'alabait_email' );
+                      }
+                    ?>
                   </span>
                 </a>
               </li>
@@ -61,14 +85,66 @@
                   Наши соц. сети
                 </a>
               </li>
-							<?php while ( have_rows('company_social', 26) ) : the_row(); ?>
-							<li class="nav-item">
-								<a class="nav-link waves-effect waves-light" href="<?php the_sub_field('link'); ?>">
-									<i class="fab fa-<?php the_sub_field('icon'); ?> is-main__header-soc-i1"></i>
-								</a>
-							</li>
-									<li class="wow slideInUp"><?php the_sub_field('tekst'); ?></li>
-							<?php endwhile; ?>
+              <?
+              $alabait_instagram = get_option( 'alabait_instagram' );
+               if ($alabait_instagram) {
+                 ?>
+                <li class="nav-item">
+  								<a class="nav-link waves-effect waves-light" href="<?php echo get_option( 'alabait_instagram' ); ?>">
+  									<i class="fab fa-instagram is-main__header-soc-i1"></i>
+  								</a>
+  							</li>
+                 <?
+                }
+              ?>
+              <?
+              $alabait_odnoklassniki = get_option( 'alabait_odnoklassniki' );
+               if ($alabait_odnoklassniki) {
+                 ?>
+                <li class="nav-item">
+  								<a class="nav-link waves-effect waves-light" href="<?php echo get_option( 'alabait_odnoklassniki' ); ?>">
+  									<i class="fab fa-odnoklassniki is-main__header-soc-i2"></i>
+  								</a>
+  							</li>
+                 <?
+                }
+              ?>
+              <?
+              $alabait_facebook = get_option( 'alabait_facebook' );
+               if ($alabait_facebook) {
+                 ?>
+                <li class="nav-item">
+  								<a class="nav-link waves-effect waves-light" href="<?php echo get_option( 'alabait_facebook' ); ?>">
+  									<i class="fab fa-facebook-f is-main__header-soc-i3"></i>
+  								</a>
+  							</li>
+                 <?
+                }
+              ?>
+              <?
+              $alabait_vkontakte = get_option( 'alabait_vkontakte' );
+               if ($alabait_vkontakte) {
+                 ?>
+                <li class="nav-item">
+  								<a class="nav-link waves-effect waves-light" href="<?php echo get_option( 'alabait_vkontakte' ); ?>">
+  									<i class="fab fa-vk is-main__header-soc-i4"></i>
+  								</a>
+  							</li>
+                 <?
+                }
+              ?>
+              <?
+              $alabait_telegram = get_option( 'alabait_telegram' );
+               if ($alabait_telegram) {
+                 ?>
+                <li class="nav-item">
+  								<a class="nav-link waves-effect waves-light" href="<?php echo get_option( 'alabait_telegram' ); ?>">
+  									<i class="fab fa-telegram-plane is-main__header-soc-i4"></i>
+  								</a>
+  							</li>
+                 <?
+                }
+              ?>
             </ul>
             </div>
           </div>

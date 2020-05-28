@@ -48,6 +48,10 @@ if ( ! function_exists( 'alabait_setup' ) ) :
      'name' => 'TinyMCE Advanced',
      'slug' => 'tinymce-advanced',
      ),
+				 array(
+		 'name' => 'No Category Base (WPML)',
+		 'slug' => 'no-category-base-wpml',
+		 ),
 
      /* AutoInstall from Theme Repo */
 		 	array(
@@ -296,6 +300,275 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function mytheme_customize_register( $wp_customize ) {
+
+$wp_customize->add_section(
+
+    'data_site_section',
+
+    array(
+        'title' => 'Контактная информация',
+        'capability' => 'edit_theme_options',
+        'description' => "Телефоны, мессенджеры, адреса компании, социальные сети и другое..."
+    )
+);
+
+
+$wp_customize->add_setting(
+
+    'alabait_address',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+$wp_customize->add_control(
+
+    'alabait_address_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Адрес компании",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_address'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_address_link',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_address_link_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Ссылка на карту с организацией в Яндекс",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_address_link'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_phone',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_phone_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Телефон/Факс",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_phone'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_mobile',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_mobile_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Мобильный телефон/Whatsapp",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_mobile'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_email',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_email_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Электронная почта",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_email'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_instagram',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_instagram_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Инстаграм",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_instagram'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_odnoklassniki',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_odnoklassniki_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Одноклассники",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_odnoklassniki'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_odnoklassniki',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_odnoklassniki_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Одноклассники",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_odnoklassniki'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_facebook',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_facebook_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Фейсбук",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_facebook'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_vkontakte',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_vkontakte_control',
+
+    array(
+        'type' => 'text',
+        'label' => "ВКонтакте",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_vkontakte'
+    )
+);
+
+$wp_customize->add_setting(
+
+    'alabait_telegram',
+
+    array(
+        'default' => '',
+        'type' => 'option'
+    )
+);
+
+$wp_customize->add_control(
+
+    'alabait_telegram_control',
+
+    array(
+        'type' => 'text',
+        'label' => "Телеграм",
+        'section' => 'data_site_section',
+
+        'settings' => 'alabait_telegram'
+    )
+);
+
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
 
 
 ?>
