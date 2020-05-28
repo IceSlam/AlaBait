@@ -123,7 +123,8 @@ if ( ! function_exists( 'alabait_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'alabait' ),
+				'headerMenu' => esc_html__( 'Верхнее меню', 'alabait' ),
+				'footerMenu' => esc_html__( 'Нижнее меню', 'alabait' ),
 			)
 		);
 
@@ -221,17 +222,35 @@ add_action( 'widgets_init', 'alabait_widgets_init' );
  */
 function alabait_scripts() {
 	wp_enqueue_style( 'alabait-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'alabait-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'alabait-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'alabait-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'alabait_scripts' );
+
+/* Custom logo in adminbar */
+
+function alabait_custom_logo() {
+echo '
+	<style type="text/css">
+	#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+	display:inline-block;
+	background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/img/logo_wp_navbar.png) !important;
+	background-position: 0 0;
+	width:20px !important;
+	height: 20px !important;
+	color:rgba(0, 0, 0, 0);
+	}
+	#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+	background-position: 0 0;
+	}
+	</style>
+';
+}
+add_action('wp_before_admin_bar_render', 'alabait_custom_logo');
+
 
 /**
  * Implement the Custom Header feature.
