@@ -221,14 +221,28 @@ add_action( 'widgets_init', 'alabait_widgets_init' );
  * Enqueue scripts and styles.
  */
 function alabait_scripts() {
-	wp_enqueue_style( 'alabait-style', get_stylesheet_uri(), array(), _S_VERSION );
+		/* AlaBait Theme styles */
+		wp_enqueue_style( 'Roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' );
+		wp_enqueue_style( 'Comfortaa-font', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap' );
+		wp_enqueue_style( 'Montserrat-font', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' );
+		wp_enqueue_style( 'Bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css', array(), 4.4 );
+		wp_enqueue_style( 'MDBootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css', array(), 4.16 );
+		wp_enqueue_style( 'UIKit', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css', array(), 3.4 );
+		wp_enqueue_style( 'AlaBait-styles', get_stylesheet_uri(), array(), 1.0, );
+		wp_enqueue_style( 'AlaBait-main', get_template_directory_uri() . '/assets/css/main.css', array(), 0.9, all );
+		wp_enqueue_style( 'AlaBait-media', get_template_directory_uri() . '/assets/css/media.css', array(), 0.9, all );
 
-	wp_enqueue_script( 'alabait-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	wp_enqueue_script( 'alabait-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
-
-}
-add_action( 'wp_enqueue_scripts', 'alabait_scripts' );
+		/* AlaBait Theme scripts */
+		wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/6ac2b40a9b.js', array(), 5.13 );
+		wp_enqueue_script( 'jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 3.4 );
+		wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js', array(), 1.14 );
+		wp_enqueue_script( 'Bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', array(), 4.4 );
+		wp_enqueue_script( 'MDBootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js', array(), 4.16 );
+		wp_enqueue_script( 'UIKit', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit.min.js', array(), 3.4 );
+		wp_enqueue_script( 'UIKit-Icons', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit-icons.min.js', array(), 3.4 );
+		wp_enqueue_script( 'VueJS', 'https://cdn.jsdelivr.net/npm/vue@2.6.11', array(), 4.16 );
+	}
+	add_action( 'wp_enqueue_scripts', 'alabait_scripts' );
 
 /* Custom logo in adminbar */
 
