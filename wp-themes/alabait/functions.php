@@ -128,6 +128,10 @@ if ( ! function_exists( 'alabait_setup' ) ) :
 			)
 		);
 
+
+
+		add_theme_support('menus');
+
 		function remove_footer_admin () {
 		echo '<p>AlaBait Theme developed by <a href="https://github.com/IceSlam" target="_blank">IceSlam</a></p>';
 		}

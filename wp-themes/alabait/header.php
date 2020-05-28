@@ -141,7 +141,9 @@
               aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="basicExampleNav">
+
               <ul class="navbar-nav mx-auto is-header__navbar-menu">
                 <li class="nav-item">
                   <a href="" class="nav-link">
