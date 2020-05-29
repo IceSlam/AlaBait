@@ -52,6 +52,10 @@ if ( ! function_exists( 'alabait_setup' ) ) :
 		 'name' => 'No Category Base (WPML)',
 		 'slug' => 'no-category-base-wpml',
 		 ),
+				 array(
+		 'name' => 'Easy SVG Support',
+		 'slug' => 'easy-svg',
+		 ),
 
      /* AutoInstall from Theme Repo */
 		 	array(
@@ -569,6 +573,7 @@ $wp_customize->add_control(
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
+
 
 
 ?>

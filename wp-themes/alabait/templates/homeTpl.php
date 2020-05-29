@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Главная страница
+ * Template Post Type: page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -123,118 +124,42 @@ get_header();
         <div class="is-services__title-divider2">
         </div>
         <div class="row .is-services__cards">
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Консультации
-                 по 1С
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item2.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>1С
-                 в облаке
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item3.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Аренда
-                сервера
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item4.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Сопровождение
-                1С
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item4.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Сопровождение
-                1С
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item3.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Аренда
-                сервера
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item2.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>1С
-                 в облаке
-              </h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-3">
-            <div class="is-services__cards-item">
-              <div class="is-services__cards-item__ellipse">
-                <img src="./assets/alabayt/img/services_item.svg" alt="">
-              </div>
-              <div class="is-services__title-divider1">
-              </div>
-              <div class="is-services__title-divider2">
-              </div>
-              <h4>Консультации
-                 по 1С
-              </h4>
-            </div>
-          </div>
+          <?
+            // задаем нужные нам критерии выборки данных из БД
+            $args = array(
+              'posts_per_page' => 8,
+              'cat' => '4'
+            );
+
+            $query_services = new WP_Query( $args );
+
+            // Цикл
+            if ( $query_services->have_posts() ) {
+              while ( $query_services->have_posts() ) {
+                $query_services->the_post();
+                ?>
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                  <div class="is-services__cards-item">
+                    <div class="is-services__cards-item__ellipse">
+                      <img src="<? echo get_field('services_item_img');?>" alt="">
+                    </div>
+                    <div class="is-services__title-divider1">
+                    </div>
+                    <div class="is-services__title-divider2">
+                    </div>
+                    <h4><a style="color: #182F44;transition:all 1.25s;" href="<? the_permalink();?>"><? the_title();?>
+                      </a>
+                    </h4>
+                  </div>
+                </div>
+                <?;
+              }
+            } else {
+              // Постов не найдено
+            }
+            // Возвращаем оригинальные данные поста. Сбрасываем $post.
+            wp_reset_postdata();
+          ?>
         </div>
       </div>
       <div id="products" class="is-products container">
