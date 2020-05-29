@@ -658,6 +658,7 @@ body {
   box-shadow:         25px 0px 30px 13px rgba(10, 68, 114, 0.15);
 }
 
+
 .is-products__list .list-group-item:last-child {
   border-bottom: 0px;
 }
@@ -678,7 +679,7 @@ body {
 }
 
 .is-products__list .list-group-item:hover span:nth-child(2) {
-  margin-left: -.3em;
+  margin-left: -.5em;
 }
 
 .is-products__form {
