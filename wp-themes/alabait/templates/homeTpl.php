@@ -125,15 +125,12 @@ get_header();
         </div>
         <div class="row .is-services__cards">
           <?
-            // задаем нужные нам критерии выборки данных из БД
             $args = array(
               'posts_per_page' => 8,
               'cat' => '4'
             );
 
             $query_services = new WP_Query( $args );
-
-            // Цикл
             if ( $query_services->have_posts() ) {
               while ( $query_services->have_posts() ) {
                 $query_services->the_post();
@@ -155,9 +152,7 @@ get_header();
                 <?;
               }
             } else {
-              // Постов не найдено
             }
-            // Возвращаем оригинальные данные поста. Сбрасываем $post.
             wp_reset_postdata();
           ?>
         </div>
@@ -170,7 +165,7 @@ get_header();
             </h2>
           </div>
           <div class="col-sm-7 col-md-4 text-right">
-            <a href="!#" class="btn is-services__title-btn">
+            <a href="<? echo get_category_link(5); ?>" class="btn is-services__title-btn">
               <span>
                 Смотреть все наши продукты
               </span>
@@ -205,79 +200,38 @@ get_header();
         </div>
         <div class="row">
           <div class="col-md-7 col-lg-7 mb-5">
-            <ul class="list-group is-products__list">
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  01
-                </span>
-                <span>
-                  Аренда 1C:Бухгалтерия 8.2 (ред. 2.0)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  02
-                </span>
-                <span>
-                  Аренда 1C:Бухгалтерия 8.3 (ред. 3.0)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  03
-                </span>
-                <span>
-                  Аренда 1C:Управление торговлей 8.2 (ред. 10)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  04
-                </span>
-                <span>
-                  Аренда 1C:Управление торговлей 8.3 (ред. 11)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  05
-                </span>
-                <span>
-                  Аренда 1С:СRМ ПРОФ 8.2
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  06
-                </span>
-                <span>
-                  Аренда 1С:СRМ ПРОФ 8.3 (ред. 2.0)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  07
-                </span>
-                <span>
-                  Аренда 1С:СRМ ПРОФ + Управление торговлей 8.2 (ред. 10)
-                </span>
-              </li>
-              <li class="list-group-item">
-                <img src="./assets/alabayt/img/prod_hover-img.png" alt="Выбор продукта">
-                <span>
-                  08
-                </span>
-                <span>
-                  Аренда 1С:СRМ ПРОФ + Управление торговлей 8.3 (ред. 11)
-                </span>
-              </li>
+            <ul class="list-group is-products__list" style="margin-left:0px;">
+              <?
+
+                $args = array(
+                  'posts_per_page' => 8,
+                  'cat' => '5'
+                );
+
+                $prod_count = 1;
+
+                $query_services = new WP_Query( $args );
+
+                if ( $query_services->have_posts() ) {
+                  while ( $query_services->have_posts() ) {
+                    $query_services->the_post();
+                    ?>
+                    <li class="list-group-item">
+                      <img src="<? echo get_template_directory_uri().'/assets/img/prod_hover-img.png' ?>" alt="Выбор продукта">
+                      <span>
+                        0<? echo $prod_count++?>
+                      </span>
+                      <span>
+                        <a style="color: #182F44;transition:all 1.25s;" href="<? the_permalink();?>"><? the_title();?>
+                          </a>
+                      </span>
+                    </li>
+                    <?;
+                  }
+                } else {
+                }
+                wp_reset_postdata();
+              ?>
             </ul>
           </div>
           <div class="col-md-5 col-lg-5" >
