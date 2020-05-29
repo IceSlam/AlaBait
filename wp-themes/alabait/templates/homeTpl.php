@@ -324,13 +324,12 @@ get_header();
                     </linearGradient>
                     </defs>
                   </svg>
-                  <h2>наша компания
-                    на рынке с 2011 года
+                  <h2><? echo get_field('main_about_title'); ?>
                   </h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type spec imen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <? echo get_field('main_about_description'); ?>
                   </p>
-                  <a href="!#" class="btn is-company__btn-left">
+                  <a href="<? echo get_permalink(145); ?>" class="btn is-company__btn-left">
                     <span>
                       Больше о нашей компании</span>
                     <span>
@@ -363,52 +362,19 @@ get_header();
                       Как мы работаем
                     </h3>
                     <ul class="list-group is-company__card-list">
+                       <? while ( have_rows('main_how_we_works') ) : the_row(); ?>
                       <li class="list-group-item ">
                         <span>
-                          <img src="./assets/alabayt/img/list_item1.svg" alt="">
+                          <img src="<? echo get_sub_field('step_img');?>" alt="<? echo get_sub_field('step_description');?>">
                         </span>
-                        <span class="align-bottom">Вы оставляете
-                          заявку
+                        <span class="align-bottom"><? echo get_sub_field('step_description');?>
                         </span>
                       </li>
                       <div class="is-services__title-divider2" style="margin-bottom: 0;height: 3px;">
                       </div>
-                      <li class="list-group-item ">
-                        <span>
-                          <img src="./assets/alabayt/img/list_item2.svg" alt="">
-                        </span>
-                        <span>Мы прорабатываем оптимальное решение
-                        </span>
-                      </li>
-                      <div class="is-services__title-divider2" style="margin-bottom: 0;height: 3px;">
-                      </div>
-                      <li class="list-group-item ">
-                        <span>
-                          <img src="./assets/alabayt/img/list_item3.svg" alt="">
-                        </span>
-                        <span>Заключаем договор
-                        </span>
-                      </li>
-                      <div class="is-services__title-divider2" style="margin-bottom: 0;height: 3px;">
-                      </div>
-                      <li class="list-group-item ">
-                        <span>
-                          <img src="./assets/alabayt/img/list_item4.svg" alt="">
-                        </span>
-                        <span>Мы разрабатываем продукт для вашего бзнеса
-                        </span>
-                      </li>
-                      <div class="is-services__title-divider2" style="margin-bottom: 0;height: 3px;">
-                      </div>
-                      <li class="list-group-item ">
-                        <span>
-                          <img src="./assets/alabayt/img/list_item5.svg" alt="">
-                        </span>
-                        <span>Вы получаете готовое решение
-                        </span>
-                      </li>
+                      <? endwhile; ?>
                     </ul>
-                    <a href="!#" class="btn is-company__card-btn btn-block">
+                    <a href="<? echo get_permalink(145); ?>" class="btn is-company__card-btn btn-block">
                       Узнайте больше
                     </a>
                   </div>
@@ -431,50 +397,21 @@ get_header();
         <div class="is-services__title-divider2">
         </div>
         <div class="row is-status__items">
+          <?
+          $status_count = 1;
+          while ( have_rows('main_company_statuses') ) : the_row(); ?>
           <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
             <span class="is-status__item ">
-              <img class="mx-auto" src="./assets/alabayt/img/status_1c.png" alt="Статус 1С">
+              <img class="mx-auto" src="<? echo get_sub_field('status_img') ?>" alt="<? echo get_sub_field('status_description'); ?>">
             </span>
-            <span class="is-status__item-ok itm">
-              <img src="./assets/alabayt/img/item_ok.svg" alt="Статус Ок">
+            <span class="is-status__item-ok itm<? echo $status_count ?>">
+              <img src="<? echo get_template_directory_uri().'/assets/img/item_ok.svg' ?>" alt="Статус Ок">
             </span>
-            <p class="is-status__item-text">Центр сопровождения программ
-              и информационных продуктов
-              фирмы «1С»
+            <p class="is-status__item-text"><? echo get_sub_field('status_description'); ?>
             </p>
           </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-            <span class="is-status__item ">
-              <img class="mx-auto" src="./assets/alabayt/img/status_1c.png" alt="Статус 1С">
-            </span>
-            <span class="is-status__item-ok itm2">
-              <img src="./assets/alabayt/img/item_ok.svg" alt="Статус Ок">
-            </span>
-            <p class="is-status__item-text">Электронные трудовые книжки - практика сдачи новой отчетности, оформление в "1С:Зарплата
-            </p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-            <span class="is-status__item ">
-              <img class="mx-auto" src="./assets/alabayt/img/status_1c.png" alt="Статус 1С">
-            </span>
-            <span class="is-status__item-ok itm3">
-              <img src="./assets/alabayt/img/item_ok.svg" alt="Статус Ок">
-            </span>
-            <p class="is-status__item-text">Электронный документооборот
-              при работе с маркированным товаром на практических примерах
-            </p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-            <span class="is-status__item ">
-              <img class="mx-auto" src="./assets/alabayt/img/status_1c.png" alt="Статус 1С">
-            </span>
-            <span class="is-status__item-ok itm4">
-              <img src="./assets/alabayt/img/item_ok.svg" alt="Статус Ок">
-            </span>
-            <p class="is-status__item-text">Практические кейсы работы
-              с онлайн-кассами в сложных ситуациях
-            </p>
-          </div>
+          <? $status_count++ ?>
+           <? endwhile; ?>
         </div>
       </div>
       <div id="clients" class="is-clients container pt-2 pb-3">
@@ -485,7 +422,7 @@ get_header();
             </h2>
           </div>
           <div class="col-sm-7 col-md-4 text-right">
-            <a href="!#" class="btn is-services__title-btn">
+            <a href="<? echo get_category_link(6); ?>" class="btn is-services__title-btn">
               <span>
                 Перейти в раздел "Клиенты"
               </span>
@@ -519,64 +456,42 @@ get_header();
         <div class="is-services__title-divider2">
         </div>
         <div class="row ">
-          <div class="is-col col1">
-            <div style="background-image: url(./assets/alabayt/img/clients_item1.png);" class="is-clients__card">
-              <div class="card-bg0">
-                <div class="card-bg1">
-                  <div class="card-bg2">
-                    <div class="card-bg3">
-                      <h4><a href="!#">Производство
-                        (молочная и сырная
-                        продукция)</a>
-                      </h4>
+          <?
+
+          $partners_count = 1;
+
+            $args = array(
+              'posts_per_page' => '4',
+              'cat' => '6'
+            );
+
+            $query_partners = new WP_Query( $args );
+
+            if ( $query_partners->have_posts() ) {
+              while ( $query_partners->have_posts() ) {
+                $query_partners->the_post();
+                ?>
+                <div class="is-col col<? echo $partners_count ?>">
+                  <div style="background-image: url(<? echo get_field('partners_img');?>)" class="is-clients__card">
+                    <div class="card-bg0">
+                      <div class="card-bg1">
+                        <div class="card-bg2">
+                          <div class="card-bg3">
+                            <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="is-col col2">
-            <div style="background-image: url(./assets/alabayt/img/clients_item2.png);" class="is-clients__card">
-              <div class="card-bg0">
-                <div class="card-bg1">
-                  <div class="card-bg2">
-                    <div class="card-bg3">
-                      <h4><a href="!#">Услуги</a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="is-col">
-            <div style="background-image: url(./assets/alabayt/img/clients_item3.png);" class="is-clients__card">
-              <div class="card-bg0">
-                <div class="card-bg1">
-                  <div class="card-bg2">
-                    <div class="card-bg3">
-                      <h4><a href="!#">Лесозаготовка</a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="is-col">
-            <div style="background-image: url(./assets/alabayt/img/clients_item4.png);" class="is-clients__card">
-              <div class="card-bg0">
-                <div class="card-bg1">
-                  <div class="card-bg2">
-                    <div class="card-bg3">
-                      <h4><a href="!#">Торговля</a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                <? $partners_count++;?>
+                <?;
+              }
+            } else {
+            }
+            wp_reset_postdata();
+          ?>
         </div>
       </div>
 <?php
