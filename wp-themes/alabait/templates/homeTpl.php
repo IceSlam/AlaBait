@@ -367,7 +367,7 @@ get_header();
                         <span>
                           <img src="<? echo get_sub_field('step_img');?>" alt="<? echo get_sub_field('step_description');?>">
                         </span>
-                        <span class="align-bottom"><? echo get_sub_field('step_description');?>
+                        <span class="align-middle"><? echo get_sub_field('step_description');?>
                         </span>
                       </li>
                       <div class="is-services__title-divider2" style="margin-bottom: 0;height: 3px;">
@@ -457,40 +457,25 @@ get_header();
         </div>
         <div class="row ">
           <?
-
           $partners_count = 1;
-
-            $args = array(
-              'posts_per_page' => '4',
-              'cat' => '6'
-            );
-
-            $query_partners = new WP_Query( $args );
-
-            if ( $query_partners->have_posts() ) {
-              while ( $query_partners->have_posts() ) {
-                $query_partners->the_post();
-                ?>
-                <div class="is-col col<? echo $partners_count ?>">
-                  <div style="background-image: url(<? echo get_field('partners_img');?>)" class="is-clients__card">
-                    <div class="card-bg0">
-                      <div class="card-bg1">
-                        <div class="card-bg2">
-                          <div class="card-bg3">
-                            <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a>
-                            </h4>
-                          </div>
-                        </div>
-                      </div>
+          while ( have_rows('main_clients_list') ) : the_row(); ?>
+          <div class="is-col col<? echo $partners_count ?>">
+            <div style="background-image: url(<? echo get_sub_field('clients_img');?>)" class="is-clients__card">
+              <div class="card-bg0">
+                <div class="card-bg1">
+                  <div class="card-bg2">
+                    <div class="card-bg3">
+                      <h4><a href="<? echo get_sub_field('clients_link');?>"><? echo get_sub_field('clients_title');?></a>
+                      </h4>
                     </div>
                   </div>
                 </div>
-                <? $partners_count++;?>
-                <?;
-              }
-            } else {
-            }
-            wp_reset_postdata();
+              </div>
+            </div>
+          </div>
+         <?
+          $partners_count++;
+          endwhile;
           ?>
         </div>
       </div>
