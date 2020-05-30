@@ -29,7 +29,7 @@
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-top: 2em;" href="!#" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-top: 2em;" href="<? echo get_category_link(8); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -66,63 +66,35 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li>
-                  <span class="align-middle">
-                    <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item1.png" alt="">
-                  </span>
-                </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item2.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item3.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item4.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item1.png" alt="">
-                    </span>
-                  </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item2.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item4.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/fabric_item1.png" alt="">
-                      </span>
-                    </li>
+                <?
+                  $args = array(
+                    'posts_per_page' => 8,
+                    'cat' => '8'
+                  );
+
+                  $query_partners = new WP_Query( $args );
+                  if ( $query_partners->have_posts() ) {
+                    while ( $query_partners->have_posts() ) {
+                      $query_partners->the_post();
+                      ?>
+                      <li>
+                        <span class="align-middle">
+                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
+                        </span>
+                      </li>
+                      <?;
+                    }
+                  } else {
+                  }
+                  wp_reset_postdata();
+                ?>
               </ul>
 
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
-                <img src="./assets/alabayt/img/partners_slide_np.png" alt="Слайд назад">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
               <a class="uk-position-center-right uk-position-small is-main__slider-navs fabric-nav-n" href="#" uk-slidenav-next uk-slider-item="next">
-                <img src="./assets/alabayt/img/partners_slide_nn.png" alt="Слайд вперед">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Слайд вперед">
               </a>
           </div>
           </div>
@@ -136,7 +108,7 @@
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-bottom: 1em;margin-top: -1em;" href="!#" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_category_link(9); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -173,63 +145,35 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li>
-                  <span class="align-middle">
-                    <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item1.png" alt="">
-                  </span>
-                </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item2.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item3.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item4.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item1.png" alt="">
-                    </span>
-                  </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item2.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item4.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/partservices_item1.png" alt="">
-                      </span>
-                    </li>
+                <?
+                  $args = array(
+                    'posts_per_page' => 8,
+                    'cat' => '9'
+                  );
+
+                  $query_partners = new WP_Query( $args );
+                  if ( $query_partners->have_posts() ) {
+                    while ( $query_partners->have_posts() ) {
+                      $query_partners->the_post();
+                      ?>
+                      <li>
+                        <span class="align-middle">
+                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
+                        </span>
+                      </li>
+                      <?;
+                    }
+                  } else {
+                  }
+                  wp_reset_postdata();
+                ?>
               </ul>
 
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
-                <img src="./assets/alabayt/img/partners_slide_np.png" alt="Слайд назад">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
               <a class="uk-position-center-right uk-position-small is-main__slider-navs fabric-nav-n" href="#" uk-slidenav-next uk-slider-item="next">
-                <img src="./assets/alabayt/img/partners_slide_nn.png" alt="Слайд вперед">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Слайд вперед">
               </a>
           </div>
           </div>
@@ -243,7 +187,7 @@
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-bottom: 1em;margin-top: -1em;" href="!#" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_category_link(10); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -280,63 +224,35 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li>
-                  <span class="align-middle">
-                    <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item1.png" alt="">
-                  </span>
-                </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item2.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item3.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item4.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item1.png" alt="">
-                    </span>
-                  </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item2.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item4.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/saling_item1.png" alt="">
-                      </span>
-                    </li>
+                <?
+                  $args = array(
+                    'posts_per_page' => 8,
+                    'cat' => '10'
+                  );
+
+                  $query_partners = new WP_Query( $args );
+                  if ( $query_partners->have_posts() ) {
+                    while ( $query_partners->have_posts() ) {
+                      $query_partners->the_post();
+                      ?>
+                      <li>
+                        <span class="align-middle">
+                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
+                        </span>
+                      </li>
+                      <?;
+                    }
+                  } else {
+                  }
+                  wp_reset_postdata();
+                ?>
               </ul>
 
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
-                <img src="./assets/alabayt/img/partners_slide_np.png" alt="Слайд назад">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
               <a class="uk-position-center-right uk-position-small is-main__slider-navs fabric-nav-n" href="#" uk-slidenav-next uk-slider-item="next">
-                <img src="./assets/alabayt/img/partners_slide_nn.png" alt="Слайд вперед">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Слайд вперед">
               </a>
           </div>
           </div>
@@ -351,7 +267,7 @@
             </h2>
           </div>
           <div class="col-md-4 text-right">
-            <a style="margin-top: 2em;" href="!#" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-top: 2em;" href="<? echo get_category_link(11); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -388,63 +304,35 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li>
-                  <span class="align-middle">
-                    <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item1.png" alt="">
-                  </span>
-                </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item2.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item3.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item4.png" alt="">
-                    </span>
-                  </li>
-                  <li>
-                    <span class="align-middle">
-                      <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item1.png" alt="">
-                    </span>
-                  </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item2.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item4.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item3.png" alt="">
-                      </span>
-                    </li>
-                    <li>
-                      <span class="align-middle">
-                        <img class=" d-block mx-auto" src="./assets/alabayt/img/mechfab_item1.png" alt="">
-                      </span>
-                    </li>
+                <?
+                  $args = array(
+                    'posts_per_page' => 8,
+                    'cat' => '11'
+                  );
+
+                  $query_partners = new WP_Query( $args );
+                  if ( $query_partners->have_posts() ) {
+                    while ( $query_partners->have_posts() ) {
+                      $query_partners->the_post();
+                      ?>
+                      <li>
+                        <span class="align-middle">
+                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
+                        </span>
+                      </li>
+                      <?;
+                    }
+                  } else {
+                  }
+                  wp_reset_postdata();
+                ?>
               </ul>
 
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
-                <img src="./assets/alabayt/img/partners_slide_np.png" alt="Слайд назад">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
               <a class="uk-position-center-right uk-position-small is-main__slider-navs fabric-nav-n" href="#" uk-slidenav-next uk-slider-item="next">
-                <img src="./assets/alabayt/img/partners_slide_nn.png" alt="Слайд вперед">
+                <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Слайд вперед">
               </a>
           </div>
           </div>
