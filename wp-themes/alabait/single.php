@@ -14,6 +14,10 @@ if ( in_category( 'services' ) ) {
     include( TEMPLATEPATH.'/templates/single-partner.php' );
 } else if  ( in_category( 'tech-partners' ) ) {
     include( TEMPLATEPATH.'/templates/single-partner.php' );
+} else if  ( in_category( 'cases' ) ) {
+    include( TEMPLATEPATH.'/templates/single-cases.php' );
+} else if  ( in_category( 'anticases' ) ) {
+    include( TEMPLATEPATH.'/templates/single-cases.php' );
 } else {
     include( TEMPLATEPATH.'/templates/single-default.php' );
 };
