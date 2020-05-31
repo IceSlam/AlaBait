@@ -138,7 +138,7 @@ get_header();
                 <div class="col-md-4 col-sm-6 col-lg-3">
                   <div class="is-services__cards-item">
                     <div class="is-services__cards-item__ellipse">
-                      <img src="<? echo get_field('services_item_img');?>" alt="">
+                      <img src="<? echo get_field('services_item_icon');?>" alt="<? the_title();?>">
                     </div>
                     <div class="is-services__title-divider1">
                     </div>

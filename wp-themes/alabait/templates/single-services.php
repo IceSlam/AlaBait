@@ -4,6 +4,6 @@
   Template Post Type: post
 */
 
-echo "Шаблон Услуга";
+echo "Шаблон Услуга 1";
 
 ?>
