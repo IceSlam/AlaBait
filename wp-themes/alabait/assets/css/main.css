@@ -560,6 +560,7 @@ body {
   border: 2px solid rgba(255,255,255,.5);
   margin-bottom: 2em;
   transition: all 1.25s;
+  min-height: 266px;
 }
 
 .is-services__cards-item:hover {
@@ -592,6 +593,7 @@ body {
 
 .is-services__cards-item h4 {
   margin-left: 2em;
+  margin-right: 2em;
   font-family: Montserrat,sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1991,6 +1993,7 @@ align-items: flex-end;
   color: #182F44;
   margin-top: .5em;
   white-space: pre-line;
+  min-height: 56px;
 }
 
 .is-services__page-card__info {
@@ -2078,6 +2081,12 @@ align-items: flex-end;
   margin-top: -2.5em !important;
   border-radius: 4px;
   border: 8px solid #fff;
+}
+
+.is-cases__navs video {
+    margin-top: -2.5em !important;
+    border-radius: 4px;
+    border: 8px solid #fff;
 }
 
 .is-sdetails__page {

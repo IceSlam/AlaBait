@@ -18,6 +18,8 @@ if ( in_category( 'services' ) ) {
     include( TEMPLATEPATH.'/templates/single-cases.php' );
 } else if  ( in_category( 'anticases' ) ) {
     include( TEMPLATEPATH.'/templates/single-cases.php' );
+} else if  ( in_category( 'news' ) ) {
+    include( TEMPLATEPATH.'/templates/single-news.php' );
 } else {
     include( TEMPLATEPATH.'/templates/single-default.php' );
 };
