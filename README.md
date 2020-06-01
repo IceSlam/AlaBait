@@ -1,13 +1,19 @@
-# AlaBait Company Web Site Template v0.9 beta 1
+# AlaBait Company Web Site Template
 > WordPress Theme for AlaBait Company - Center for automation of dairy and agro-industrial enterprises
+
 > Loc: Russia, Altaysky kray, Barnaul city
+
 > WEb: http://alabait.ru
 
 ## Authors information
 Made by order of the Internet Agency Alliance+ Bryansk/Barnaul
+
 Design template: IA Alliance+
+
 Layout by: IceSlam
+
 Coded for WP: IceSlam
+
 Production: IceSlam
 
 ## Code info
@@ -26,16 +32,19 @@ Theme builded for WordPress
 
 ## Live Demos
 1. Layouts
-1.1[AlaBait Home Page](http://alabait.iceslam.ru/)
-1.2[AlaBait Partners Page](http://alabait.iceslam.ru/partners.html)
-1.3[AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
-1.4[AlaBait Services Page](http://alabait.iceslam.ru/services.html)
-1.5[AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
-2. Workable Theme
-2.1.[AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
+  1.[AlaBait Home Page](http://alabait.iceslam.ru/)
+  1.[AlaBait Partners Page](http://alabait.iceslam.ru/partners.html)
+  1.[AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
+  1.[AlaBait Services Page](http://alabait.iceslam.ru/services.html)
+  1.[AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
+1. Workable Theme
+  1.[AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
 
 ### Contacts
 IceSlam on [GitHub](https://github.com/IceSlam)
+
 IceSlam on [VK](https://vk.com/iceslam)
+
 IceSlam on [Telegram](https:/t.me/@IceSlam)
+
 IceSlam On [Web](https://iceslam.ru)
