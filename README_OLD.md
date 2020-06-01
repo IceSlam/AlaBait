@@ -37,7 +37,7 @@ Theme builded for WordPress
   3. [AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
   4. [AlaBait Services Page](http://alabait.iceslam.ru/services.html)
   5. [AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
-  
+
 2. Workable Theme
   1. [AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
 
