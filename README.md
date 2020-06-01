@@ -31,15 +31,14 @@ Production: IceSlam
 Theme builded for WordPress
 
 ## Live Demos
-1. Layouts
-  1. [AlaBait Home Page](http://alabait.iceslam.ru/)
-  2. [AlaBait Partners Page](http://alabait.iceslam.ru/partners.html)
-  3. [AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
-  4. [AlaBait Services Page](http://alabait.iceslam.ru/services.html)
-  5. [AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
-
-2. Workable Theme
-  1. [AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
+* Layouts
+  * [AlaBait Home Page](http://alabait.iceslam.ru/)
+  * [AlaBait Partners Page](http://alabait.iceslam.ru/partners.html)
+  * [AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
+  * [AlaBait Services Page](http://alabait.iceslam.ru/services.html)
+  * [AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
+* Workable Theme
+  * [AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
 
 ### Contacts
 IceSlam on [GitHub](https://github.com/IceSlam)
