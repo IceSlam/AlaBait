@@ -3,7 +3,7 @@
 
 > Loc: Russia, Altaysky kray, Barnaul city
 
-> WEb: http://alabait.ru
+> Web: http://alabait.ru
 
 ## Authors information
 Made by order of the Internet Agency Alliance+ Bryansk/Barnaul
