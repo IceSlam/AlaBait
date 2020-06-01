@@ -33,7 +33,13 @@
           </a>
         </div>
         <div class="col-md-6">
-          <video muted controls poster="<? echo get_template_directory_uri().'/assets/img/sdetails_video-preview.jpg'?>" src="<?  echo get_template_directory_uri().'/assets/img/sdetails_video-demo.mp4'?>"></video>
+          <!-- <video muted controls poster="<? echo get_template_directory_uri().'/assets/img/sdetails_video-preview.jpg'?>" src="https://www.youtube.com/embed/vQkmREhM5Es"></video> -->
+          <a class="is-video__fancy-video" data-fancybox href="<? echo get_field('services_item_video'); ?>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+              <div class="is-video__preview" style="background:url(<? echo get_field('services_item_video_preview'); ?>);"></div>
+              <div class="is-video__mask"></div>
+              <img class="is-video__play-button" src="/wp-content/themes/alabait/assets/img/video_play.png" alt="">
+
+          </a>
         </div>
       </div>
     </div>
@@ -63,63 +69,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <table class="table is-sdetails__main-page__table">
-            <thead class="">
-              <tr>
-                <th scope="">
-                  Наименование
-                </th>
-                <th scope="">
-                  Количество <br> обращений
-                </th>
-                <th scope="">
-                  Цена, руб
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="is-sdetails__main-page__table-rowspan" rowspan="4">Пакет
-                   обращений
-                   по 1С
-                </td>
-                <td class="is-sdetails__mp-tc">От 2 до 6</td>
-                <td class="is-sdetails__mp-tc">850 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 6 до 10</td>
-                <td class="is-sdetails__mp-tc">750 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 11 до 20</td>
-                <td class="is-sdetails__mp-tc">600 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 21 до 30</td>
-                <td class="is-sdetails__mp-tc">450 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__main-page__table-rowspan" rowspan="4">Пакет
-                   обращений
-                   по 1С
-                </td>
-                <td class="is-sdetails__mp-tc">От 2 до 6</td>
-                <td class="is-sdetails__mp-tc">850 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 6 до 10</td>
-                <td class="is-sdetails__mp-tc">750 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 11 до 20</td>
-                <td class="is-sdetails__mp-tc">600 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 21 до 30</td>
-                <td class="is-sdetails__mp-tc">450 руб. за каждый</td>
-              </tr>
-            </tbody>
-          </table>
+          <? echo get_field('services_support_pack') ?>
         </div>
       </div>
     </div>

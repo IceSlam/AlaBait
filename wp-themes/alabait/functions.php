@@ -240,6 +240,7 @@ function alabait_scripts() {
 		wp_enqueue_style( 'Bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css', array(), 4.4 );
 		wp_enqueue_style( 'MDBootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css', array(), 4.16 );
 		wp_enqueue_style( 'UIKit', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css', array(), 3.4 );
+		wp_enqueue_style( 'FancyBox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), 3.5 );
 		wp_enqueue_style( 'AlaBait-styles', get_stylesheet_uri(), array(), 1.0, );
 		wp_enqueue_style( 'AlaBait-main', get_template_directory_uri() . '/assets/css/main.css', array(), 0.9, all );
 		wp_enqueue_style( 'AlaBait-media', get_template_directory_uri() . '/assets/css/media.css', array(), 0.9, all );
@@ -252,7 +253,7 @@ function alabait_scripts() {
 		wp_enqueue_script( 'MDBootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js', array(), 4.16 );
 		wp_enqueue_script( 'UIKit', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit.min.js', array(), 3.4 );
 		wp_enqueue_script( 'UIKit-Icons', 'https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit-icons.min.js', array(), 3.4 );
-		wp_enqueue_script( 'VueJS', 'https://cdn.jsdelivr.net/npm/vue@2.6.11', array(), 4.16 );
+		wp_enqueue_script( 'FancyBox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array(), 3.5 );
 	}
 	add_action( 'wp_enqueue_scripts', 'alabait_scripts' );
 
