@@ -1,38 +1,39 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package AlaBait
- */
+<?
+  /*
+    Template Name: По умолчанию
+		Template Post Type: page
+  */
 
-get_header();
 ?>
+<?php get_header(); ?>
 
-	<main id="primary" class="site-main">
+    <div style="padding-bottom: 2em;" class="is-pages__navs is-cases__navs container">
+      <nav aria-label="breadcrumb">
+        <?php
+          if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<ol style="margin-left:0px;" class="breadcrumb bc-yoast">','</ol>' );
+          }
+          ?>
+      </nav>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>
+            <?php the_title(); ?>
+          </h2>
+          <p>
+            <?php echo the_excerpt(); ?>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="services-page" class="is-services__page">
+    <div class="container is-services__page-main">
+      <div class="row">
+        <div class="col-md-12">
+          <? the_content(); ?>
+        </div>
+      </div>
+    </div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
