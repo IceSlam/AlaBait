@@ -1,4 +1,13 @@
 <?
+
+/*
+  Template Name: Новость
+  Template Post Type: post
+*/
+
+?>
+
+<?
 /*
   Template Name: Услуга
   Template Post Type: post
@@ -7,7 +16,7 @@
 ?>
 <?php get_header(); ?>
 
-<div style="margin-bottom:-2.5em;" class="is-cases__navs container">
+<div class="is-cases__navs container">
       <nav aria-label="breadcrumb">
         <?php
           if ( function_exists('yoast_breadcrumb') ) {
@@ -23,103 +32,15 @@
           <p>
             <? the_excerpt();?>
           </p>
-          <a href="!#" class="btn is-details__header__btn-buy">
-            <span class="mx-auto">
-              Заказать услугу
-            </span>
-            <span class="ml-auto">
-              <img src="<? echo get_template_directory_uri().'/assets/img/sdetails_btn-buy.svg'?>" alt="Заказать услугу">
-            </span>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <video muted controls poster="<? echo get_template_directory_uri().'/assets/img/sdetails_video-preview.jpg'?>" src="<?  echo get_template_directory_uri().'/assets/img/sdetails_video-demo.mp4'?>"></video>
         </div>
       </div>
     </div>
   </div>
   <div id="sdetails-page" class="is-sdetails__page">
-    <div class="is-sdetails__page-main container mb-5">
+    <div class="is-sdetails__page-main container mb-5"  style="padding-top:3em;">
       <div class="row">
-        <div class="col-md-6">
-          <p class="is-sdetails__page-main-description">
-            <? echo get_field('services_item_description'); ?>
-          </p>
-          <div class="is-services__title-divider1">
-          </div>
-          <div class="is-services__title-divider2">
-          </div>
-          <div class="is-sdetails__page-main-features">
-            <?php while ( have_rows('services_item_bonuses') ) : the_row(); ?>
-              <p class="align-middle">
-                <span class="is-sdetails__page-main-icon">
-                  <img src="<? echo get_template_directory_uri().'/assets/img/ok.png' ?>" alt="">
-                </span>
-                <span class="is-sdetails__page-main-feature">
-                  <? echo get_sub_field('bonus_title'); ?>
-                </span>
-              </p>
-    		    <?php endwhile; ?>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <table class="table is-sdetails__main-page__table">
-            <thead class="">
-              <tr>
-                <th scope="">
-                  Наименование
-                </th>
-                <th scope="">
-                  Количество <br> обращений
-                </th>
-                <th scope="">
-                  Цена, руб
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="is-sdetails__main-page__table-rowspan" rowspan="4">Пакет
-                   обращений
-                   по 1С
-                </td>
-                <td class="is-sdetails__mp-tc">От 2 до 6</td>
-                <td class="is-sdetails__mp-tc">850 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 6 до 10</td>
-                <td class="is-sdetails__mp-tc">750 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 11 до 20</td>
-                <td class="is-sdetails__mp-tc">600 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 21 до 30</td>
-                <td class="is-sdetails__mp-tc">450 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__main-page__table-rowspan" rowspan="4">Пакет
-                   обращений
-                   по 1С
-                </td>
-                <td class="is-sdetails__mp-tc">От 2 до 6</td>
-                <td class="is-sdetails__mp-tc">850 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 6 до 10</td>
-                <td class="is-sdetails__mp-tc">750 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 11 до 20</td>
-                <td class="is-sdetails__mp-tc">600 руб. за каждый</td>
-              </tr>
-              <tr>
-                <td class="is-sdetails__mp-tc">От 21 до 30</td>
-                <td class="is-sdetails__mp-tc">450 руб. за каждый</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-md-12">
+          <? the_content();?>
         </div>
       </div>
     </div>
@@ -128,7 +49,7 @@
         <div class="row">
           <div class="col-md-12">
             <h2>
-              Смотрите также другие наши услуги
+              Читайте также другие новости
             </h2>
             <div class="is-services__title-divider1">
             </div>
@@ -143,7 +64,7 @@
                   <?
                     $args = array(
                       'posts_per_page' => 6,
-                      'cat' => '4'
+                      'cat' => '16'
                     );
 
                     $query_cases = new WP_Query( $args );
@@ -156,19 +77,21 @@
                           <div class="is-services__page-card">
                             <div class="row">
                               <div class="col is-services__page-card-l">
-                                <div class="is-services__page-card__bg0" style="background: url(<? echo get_field('services_item_img'); ?>);">
+                                <div class="is-services__page-card__bg0" style="background: url(<? echo get_field('news_img'); ?>);">
                                   <div class="is-services__page-card__mask"></div>
                                 </div>
                               </div>
                               <div class="col is-services__page-card-r">
                                 <div class="is-services__page-card__info">
-                                  <h3><? the_title();?>
+                                  <h3 style="max-height:56px;overflow:hidden;"><? the_title();?>
                                   </h3>
                                   <div class="is-services__title-divider1"></div>
                                   <div class="is-services__title-divider2"></div>
-                                  <p>
-                                    <?php the_excerpt(); ?>
-                                  </p>
+                                  <div style="max-height:185px; overflow:hidden;">
+                                    <p>
+                                      <?php the_excerpt(); ?>
+                                    </p>
+                                  </div>
                                   <a href="<? the_permalink();?>" class="btn d-block">
                                     Узнать больше
                                   </a>
