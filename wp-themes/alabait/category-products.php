@@ -1,11 +1,10 @@
 <?
   /*
-    Template Name: Продукты 1С и оборудование
+    Template Name: Продукты 1C и оборудование
   */
 
 ?>
 <?php get_header(); ?>
-
 
     <div style="padding-bottom: 2em;" class="is-pages__navs is-cases__navs container">
       <nav aria-label="breadcrumb">
@@ -27,14 +26,56 @@
       </div>
     </div>
   </div>
-  <div style="min-height: auto;" id="services-page" class="is-services__page">
+  <div id="services-page" class="is-services__page">
     <div class="container is-services__page-main">
       <div class="row">
-        <div class="col-md-12">
-          <? the_content(); ?>
-        </div>
+
+        <?
+          $args = array(
+            'posts_per_page' => 8,
+            'cat' => '5'
+          );
+
+          $query_cases = new WP_Query( $args );
+          if ( $query_cases->have_posts() ) {
+            while ( $query_cases->have_posts() ) {
+              $query_cases->the_post();
+              ?>
+
+              <div class="col-md-12 col-lg-6" style="padding-left: 15px;">
+                <div class="is-services__page-card">
+                  <div class="row">
+                    <div class="col is-services__page-card-l">
+                      <div class="is-services__page-card__bg0" style="background: url(<? echo get_field('products_item_img'); ?>);">
+                        <div class="is-services__page-card__mask"></div>
+                      </div>
+                    </div>
+                    <div class="col is-services__page-card-r">
+                      <div class="is-services__page-card__info">
+                        <h3 style="max-height:56px;overflow:hidden;"><? the_title();?>
+                        </h3>
+                        <div class="is-services__title-divider1"></div>
+                        <div class="is-services__title-divider2"></div>
+                        <div style="max-height:185px;overflow:hidden;">
+                          <p>
+                            <?php the_excerpt(); ?>
+                          </p>
+                        </div>
+                        <a href="<? the_permalink();?>" class="btn d-block">
+                          Узнать больше
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?;
+            }
+          } else {
+          }
+          wp_reset_postdata();
+        ?>
       </div>
     </div>
-
 
 <?php get_footer(); ?>
