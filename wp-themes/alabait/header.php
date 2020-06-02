@@ -173,7 +173,7 @@
               </div>
             <div class="col-md-6">
               <span class="navbar-nav ml-auto is-header__btns">
-                <a href="!#" class="btn ml-auto is-header__btn">
+                <a href="<? echo get_page_link( 488 ); ?>" class="btn ml-auto is-header__btn">
                   <span>
                     <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <ellipse cx="5.48029" cy="4.14559" rx="3.13141" ry="3.14559" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>

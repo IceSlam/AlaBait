@@ -1,6 +1,5 @@
 <?
   /*
-    Template Name: По умолчанию
 		Template Post Type: page
   */
 
@@ -27,7 +26,7 @@
       </div>
     </div>
   </div>
-  <div id="services-page" class="is-services__page">
+  <div style="min-height: auto;" id="services-page" class="is-services__page">
     <div class="container is-services__page-main">
       <div class="row">
         <div class="col-md-12">
