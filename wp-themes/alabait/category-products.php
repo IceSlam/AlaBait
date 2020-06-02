@@ -6,6 +6,35 @@
 ?>
 <?php get_header(); ?>
 
-Продукты 1С и оборудование
+
+    <div style="padding-bottom: 2em;" class="is-pages__navs is-cases__navs container">
+      <nav aria-label="breadcrumb">
+        <?php
+          if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<ol style="margin-left:0px;" class="breadcrumb bc-yoast">','</ol>' );
+          }
+          ?>
+      </nav>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>
+            <?php single_cat_title(); ?>
+          </h2>
+          <p>
+            <?php echo category_description(); ?>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="min-height: auto;" id="services-page" class="is-services__page">
+    <div class="container is-services__page-main">
+      <div class="row">
+        <div class="col-md-12">
+          <? the_content(); ?>
+        </div>
+      </div>
+    </div>
+
 
 <?php get_footer(); ?>

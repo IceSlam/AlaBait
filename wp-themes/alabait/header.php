@@ -184,7 +184,7 @@
                     Наши контакты
                   </span>
                 </a>
-                <a href="!#" class="btn ml-auto is-header__btn">
+                <a href="!#" class="btn ml-auto is-header__btn" uk-toggle="target: #order-call">
                   <span>
                     <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter="url(#filter0_d)">
