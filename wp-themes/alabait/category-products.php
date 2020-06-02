@@ -76,6 +76,40 @@
           wp_reset_postdata();
         ?>
       </div>
+      <div class="row col-md-12">
+        <ul class="is-cases__pagination" style="margin-left:0;">
+          <li>
+            <a href="">
+              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Страница назад">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              1
+            </a>
+          </li>
+          <li>
+            <a href="">
+              2
+            </a>
+          </li>
+          <li>
+            <a href="">
+              3
+            </a>
+          </li>
+          <li>
+            <a href="">
+              ...
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Страница вперед">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
 <?php get_footer(); ?>

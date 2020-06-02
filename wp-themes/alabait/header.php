@@ -71,7 +71,7 @@
             </ul>
             <ul class="navbar-nav mx-auto nav-flex-icons" style="margin-top: 0;">
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="<?php echo get_permalink(26)?>">
+                <a class="nav-link waves-effect waves-light" href="/?s">
                   <i class="fas fa-search is-main__header-search-i" style="display: inline-block;"></i>
                   <span style="text-decoration: underline;">
                     Поиск по сайту
