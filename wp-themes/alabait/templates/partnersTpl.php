@@ -1,10 +1,16 @@
-<?
-  /*
-    Template Name: Партнеры
-  */
+<?php
+/**
+ * Template Name: Партнеры
+ * Template Post Type: page
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package AlaBait
+ */
 
+get_header();
 ?>
-<?php get_header(); ?>
+
 
 <div style="padding-bottom: 2em;" class="is-pages__navs container">
       <nav aria-label="breadcrumb">
@@ -15,7 +21,7 @@
           ?>
       </nav>
       <h2>
-        <?php single_cat_title(); ?>
+        <?php the_title(); ?>
       </h2>
     </div>
   </div>
@@ -29,7 +35,7 @@
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-top: 2em;" href="<? echo get_category_link(8); ?>" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-top: 2em;" href="<? echo get_page_link( 459 ); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -66,30 +72,14 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <?
-                  $args = array(
-                    'posts_per_page' => 8,
-                    'cat' => '8'
-                  );
-
-                  $query_partners = new WP_Query( $args );
-                  if ( $query_partners->have_posts() ) {
-                    while ( $query_partners->have_posts() ) {
-                      $query_partners->the_post();
-                      ?>
-                      <li>
-                        <span class="align-middle">
-                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
-                        </span>
-                      </li>
-                      <?;
-                    }
-                  } else {
-                  }
-                  wp_reset_postdata();
-                ?>
+                <?php while ( have_rows('mol_partner') ) : the_row(); ?>
+                  <li>
+                    <span class="align-middle">
+                      <img class=" d-block mx-auto" src="<? echo get_sub_field('mol_logo');?>" alt="<? echo get_sub_field('mol_title');?>">
+                    </span>
+                  </li>
+        		    <?php endwhile; ?>
               </ul>
-
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
                 <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
@@ -101,14 +91,14 @@
         </div>
       </div>
       <div id="partservices" class="is-partservices container">
-        <div class="row is-services__title">
+        <div style="margin-bottom:0;" class="row is-services__title">
           <div class="col-md-6">
             <h2>
               Наши клиенты отрасли «Услуги»
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_category_link(9); ?>" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_page_link( 464 ); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -145,30 +135,14 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <?
-                  $args = array(
-                    'posts_per_page' => 8,
-                    'cat' => '9'
-                  );
-
-                  $query_partners = new WP_Query( $args );
-                  if ( $query_partners->have_posts() ) {
-                    while ( $query_partners->have_posts() ) {
-                      $query_partners->the_post();
-                      ?>
-                      <li>
-                        <span class="align-middle">
-                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
-                        </span>
-                      </li>
-                      <?;
-                    }
-                  } else {
-                  }
-                  wp_reset_postdata();
-                ?>
+                <?php while ( have_rows('services_partner') ) : the_row(); ?>
+                  <li>
+                    <span class="align-middle">
+                      <img class=" d-block mx-auto" src="<? echo get_sub_field('services_logo');?>" alt="<? echo get_sub_field('services_title');?>">
+                    </span>
+                  </li>
+        		    <?php endwhile; ?>
               </ul>
-
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
                 <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
@@ -180,14 +154,14 @@
         </div>
       </div>
       <div id="saling" class="is-salin container">
-        <div class="row is-services__title">
+        <div style="margin-bottom:0 !important;" class="row is-services__title">
           <div class="col-md-6">
             <h2>
               Наши клиенты отрасли «Торговля»
             </h2>
           </div>
           <div class="col-md-6 text-right">
-            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_category_link(10); ?>" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-bottom: 1em;margin-top: -1em;" href="<? echo get_page_link( 466 ); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -224,28 +198,13 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <?
-                  $args = array(
-                    'posts_per_page' => 8,
-                    'cat' => '10'
-                  );
-
-                  $query_partners = new WP_Query( $args );
-                  if ( $query_partners->have_posts() ) {
-                    while ( $query_partners->have_posts() ) {
-                      $query_partners->the_post();
-                      ?>
-                      <li>
-                        <span class="align-middle">
-                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
-                        </span>
-                      </li>
-                      <?;
-                    }
-                  } else {
-                  }
-                  wp_reset_postdata();
-                ?>
+                <?php while ( have_rows('sale_partner') ) : the_row(); ?>
+                  <li>
+                    <span class="align-middle">
+                      <img class=" d-block mx-auto" src="<? echo get_sub_field('sale_logo');?>" alt="<? echo get_sub_field('sale_title');?>">
+                    </span>
+                  </li>
+        		    <?php endwhile; ?>
               </ul>
 
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
@@ -259,7 +218,7 @@
         </div>
       </div>
       <div id="mechfab" class="is-mechfab container">
-        <div class="row is-services__title">
+        <div style="margin-bottom:0 !important;" class="row is-services__title">
           <div class="col-md-8">
             <h2>
               Наши клиенты отрасли «Производство»
@@ -267,7 +226,7 @@
             </h2>
           </div>
           <div class="col-md-4 text-right">
-            <a style="margin-top: 2em;" href="<? echo get_category_link(11); ?>" class="btn is-services__title-btn align-bottom ">
+            <a style="margin-top: 2em;" href="<? echo get_page_link( 468 ); ?>" class="btn is-services__title-btn align-bottom ">
               <span>
                 Узнать подробнее
               </span>
@@ -304,30 +263,14 @@
           <div class="col-md-12">
             <div class="uk-position-relative uk-visible-toggle uk-light is-fabric__main-slider" tabindex="-1" uk-slider>
               <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <?
-                  $args = array(
-                    'posts_per_page' => 8,
-                    'cat' => '11'
-                  );
-
-                  $query_partners = new WP_Query( $args );
-                  if ( $query_partners->have_posts() ) {
-                    while ( $query_partners->have_posts() ) {
-                      $query_partners->the_post();
-                      ?>
-                      <li>
-                        <span class="align-middle">
-                          <img class=" d-block mx-auto" src="<? echo get_field('partner_img');?>" alt="<? the_title();?>">
-                        </span>
-                      </li>
-                      <?;
-                    }
-                  } else {
-                  }
-                  wp_reset_postdata();
-                ?>
+                <?php while ( have_rows('tech_partner') ) : the_row(); ?>
+                  <li>
+                    <span class="align-middle">
+                      <img class=" d-block mx-auto" src="<? echo get_sub_field('tech_logo');?>" alt="<? echo get_sub_field('tech_title');?>">
+                    </span>
+                  </li>
+        		    <?php endwhile; ?>
               </ul>
-
               <a class="uk-position-center-left uk-position-small is-main__slider-navs fabric-nav-p" href="#" uk-slidenav-previous uk-slider-item="previous">
                 <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Слайд назад">
               </a>
