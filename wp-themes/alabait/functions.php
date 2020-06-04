@@ -575,6 +575,48 @@ $wp_customize->add_control(
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
 
+/*
+==========================================================================
+      WP pagination
+==========================================================================
+*/
+function pagination( $max_num_pages = false, $paged = false ) {
 
+	$big = 999999999;
 
+  if( !$max_num_pages ){
+      global $wp_query;
+      $max_num_pages = $wp_query->max_num_pages;
+  }
+
+  if( !$paged ){
+      $paged = max( 1, get_query_var('paged') );
+  }
+
+	$links = paginate_links(array(
+		// 'base'                  => str_replace($big,'%#%',esc_url(get_pagenum_link($big))),
+    'base'                  => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+		'format'                => '?paged=%#%',
+		'current'               => $paged,
+		'type'                  => 'array',
+		'prev_text'             => '<img src="http://wp.alabait.iceslam.ru/wp-content/themes/alabait/assets/img/partners_slide_np.png" alt="Страница назад">',
+    'next_text'             => '<img src="http://wp.alabait.iceslam.ru/wp-content/themes/alabait/assets/img/partners_slide_nn.png" alt="Страница вперед">',
+		'total'                 => $max_num_pages,
+		'show_all'              => false,
+		'end_size'              => 15,
+		'mid_size'              => 15,
+		'add_args'              => false,
+		'add_fragment'          => '',
+		'before_page_number'    => '',
+		'after_page_number'     => ''
+	));
+ 	if( is_array( $links ) ) {
+	    echo '<ul class="is-cases__pagination"  style="margin-left:0;">';
+	    foreach ( $links as $link ) {
+	    	if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>";
+	        else echo "<li>$link</li>";
+	    }
+	   	echo '</ul>';
+	 }
+}
 ?>

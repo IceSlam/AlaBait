@@ -33,13 +33,15 @@
         <?
           $args = array(
             'posts_per_page' => 8,
-            'cat' => '4'
+			      'category__in' => 4,
+			      'paged' => get_query_var('paged') ?: 1
           );
 
-          $query_cases = new WP_Query( $args );
-          if ( $query_cases->have_posts() ) {
-            while ( $query_cases->have_posts() ) {
-              $query_cases->the_post();
+          $query = new WP_Query( $args );
+
+          if ( $query->have_posts() ) {
+            while ( $query->have_posts() ) {
+              $query->the_post();
               ?>
 
               <div class="col-md-12 col-lg-6" style="padding-left: 15px;">
@@ -71,44 +73,14 @@
               </div>
               <?;
             }
-          } else {
+
           }
-          wp_reset_postdata();
         ?>
+
       </div>
       <div class="row col-md-12">
-        <ul class="is-cases__pagination" style="margin-left:0;">
-          <li>
-            <a href="">
-              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Страница назад">
-            </a>
-          </li>
-          <li>
-            <a href="">
-              1
-            </a>
-          </li>
-          <li>
-            <a href="">
-              2
-            </a>
-          </li>
-          <li>
-            <a href="">
-              3
-            </a>
-          </li>
-          <li>
-            <a href="">
-              ...
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Страница вперед">
-            </a>
-          </li>
-        </ul>
+        <?  pagination($query->max_num_pages, $query->query['paged'] ); ?>
+
       </div>
     </div>
 

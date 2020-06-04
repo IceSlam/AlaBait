@@ -1778,6 +1778,31 @@ align-items: flex-end;
   display: inline-block;
 }
 
+.is-cases__pagination li.active {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #4C6579;
+  background: #E6EDF3;
+  mix-blend-mode: normal;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px rgba(37, 57, 73, 0.3);
+  border-radius: 4px;
+  padding: 10px 0px 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  text-decoration: underline;
+  transform: scale(1.25);
+}
+
 .is-cases__main-form {
   padding-top: 2em;
   padding-bottom: 8em;
@@ -1932,7 +1957,6 @@ align-items: flex-end;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 1985px;
 }
 
 .is-services__page-main {

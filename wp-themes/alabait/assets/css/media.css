@@ -72,6 +72,12 @@
   #footer .is-header__navbar-menu .dropdown-menu {
     background: linear-gradient(0deg, #CADAEA 0%, #F3FAFF 100%);
   }
+
+  .is-page__default-content .wp-block-table {
+  		overflow-x: auto;
+  		width: 100%;
+  		display: block;
+  }
 }
 
 @media (min-width:576px) and (max-width:767px) {

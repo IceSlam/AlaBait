@@ -30,7 +30,9 @@
     <div class="container is-services__page-main">
       <div class="row">
         <div class="col-md-12">
-          <? the_content(); ?>
+          <div class="is-page__default-content">
+            <? the_content(); ?>
+          </div>
         </div>
       </div>
     </div>

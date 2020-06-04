@@ -31,10 +31,11 @@
       <div class="row">
 
         <?
-          $args = array(
-            'posts_per_page' => 8,
-            'cat' => '5'
-          );
+        $args = array(
+          'posts_per_page' => 4,
+          'category__in' => 5,
+          'paged' => get_query_var('paged') ?: 1
+        );
 
           $query_cases = new WP_Query( $args );
           if ( $query_cases->have_posts() ) {
@@ -77,38 +78,7 @@
         ?>
       </div>
       <div class="row col-md-12">
-        <ul class="is-cases__pagination" style="margin-left:0;">
-          <li>
-            <a href="">
-              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_np.png'?>" alt="Страница назад">
-            </a>
-          </li>
-          <li>
-            <a href="">
-              1
-            </a>
-          </li>
-          <li>
-            <a href="">
-              2
-            </a>
-          </li>
-          <li>
-            <a href="">
-              3
-            </a>
-          </li>
-          <li>
-            <a href="">
-              ...
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="<? echo get_template_directory_uri().'/assets/img/partners_slide_nn.png'?>" alt="Страница вперед">
-            </a>
-          </li>
-        </ul>
+        <?  pagination($query->max_num_pages, $query->query['paged'] ); ?>
       </div>
     </div>
 

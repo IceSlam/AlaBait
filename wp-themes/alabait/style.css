@@ -1,10 +1,10 @@
 /*!
 Theme Name: АлаБайт
-Theme URI: https://iceslam.github.io/AlaBait/
+Theme URI: https://alabait.iceslam.ru/
 Author: IceSlam
 Author URI: https://github.com/IceSlam/
 Description: Центр автоматизации молочных и агропромышленных предприятий
-Version: 1.0.0
+Version: 0.9.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: alabait
@@ -945,4 +945,91 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+.is-page__default-content .wp-block-table {
+	overflow-x: inherit;
+}
+
+.is-page__default-content {
+}
+
+
+
+.is-page__default-content  table {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 20px 40px rgba(134, 146, 168, 0.25);
+	box-shadow: 0px 20px 40px rgba(134, 146, 168, 0.25);
+  border-radius: 4px;
+	width: 100%;
+}
+
+.is-page__default-content table thead {
+	background: #437CB1;
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.is-page__default-content  table thead tr {
+	font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    color: #FFFFFF;
+		border-radius: 10px 10px 0 0 !important;
+}
+
+.is-page__default-content table thead tr th, .is-page__default-content table td {
+	border-bottom: none;
+    align-items: center;
+    vertical-align: middle;
+		padding-top: 1.1rem;
+    padding-bottom: 1rem;
+		padding-left: .75rem;
+		padding-right: .75rem;
+}
+
+.is-page__default-content table tbody td:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #186A9E;
+}
+
+.is-page__default-content table tbody td {
+	color: #4C6579;
+	font-weight: bold;
+}
+
+.is-page__default-content table tbody td:first-child, .is-page__default-content table tbody td:last-child  {
+  border-left: none !important;
+}
+
+.is-page__default-content table tbody tr:nth-child(even) {
+  background: linear-gradient(0deg, rgba(10, 64, 114, 0.05) 0%, rgba(10, 73, 114, 0.025) 100%);;
+}
+
+.is-page__default-content table tbody tr td[colspan="5"], .is-page__default-content table tbody tr td[colspan="2"], .is-page__default-content table tbody tr td[colspan="3"], .is-page__default-content table tbody tr td[colspan="4"], .is-page__default-content table tbody tr td[colspan="6"], .is-page__default-content table tbody tr td[colspan="7"] {
+  text-align: center;
+}
+
+.is-page__default-content table tbody tr td[rowspan="2"], .is-page__default-content table tbody tr td[rowspan="3"], .is-page__default-content table tbody tr td[rowspan="4"], .is-page__default-content table tbody tr td[rowspan="5"], .is-page__default-content table tbody tr td[rowspan="6"], .is-page__default-content table tbody tr td[rowspan="7"] {
+	font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #186A9E;
+  white-space: pre-line;
+	background-color: #fff;
+}
+
+.is-page__default-content table tbody tr td {
+	border: 1px solid rgba(10, 68, 114, 0.1);
+  min-height: 69px !important;
+}
+
+.is-page__default-content table tbody tr td:first-child[colspan="3"] > .is-page__default-content table tbody tr td:first-child{
+	color: #4C6579;
 }
