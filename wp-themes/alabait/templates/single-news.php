@@ -6,14 +6,6 @@
 */
 
 ?>
-
-<?
-/*
-  Template Name: Услуга
-  Template Post Type: post
-*/
-
-?>
 <?php get_header(); ?>
 
 <div class="is-cases__navs container">

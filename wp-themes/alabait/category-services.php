@@ -32,7 +32,7 @@
 
         <?
           $args = array(
-            'posts_per_page' => 8,
+            'posts_per_page' => 4,
 			      'category__in' => 4,
 			      'paged' => get_query_var('paged') ?: 1
           );
@@ -80,7 +80,6 @@
       </div>
       <div class="row col-md-12">
         <?  pagination($query->max_num_pages, $query->query['paged'] ); ?>
-
       </div>
     </div>
 

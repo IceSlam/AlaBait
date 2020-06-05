@@ -72,7 +72,7 @@
         <div class="row">
           <?
             $args = array(
-              'posts_per_page' => 6,
+              'posts_per_page' => 4,
               'cat' => '13'
             );
 

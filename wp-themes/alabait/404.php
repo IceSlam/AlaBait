@@ -1,60 +1,40 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package AlaBait
- */
+<?
+  /*
+		Template Post Type: page
+  */
 
-get_header();
 ?>
+<?php get_header(); ?>
 
-	<main id="primary" class="site-main">
+    <div style="padding-bottom: 2em;" class="is-pages__navs is-cases__navs container">
+      <nav aria-label="breadcrumb">
+        <?php
+          if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<ol style="margin-left:0px;" class="breadcrumb bc-yoast">','</ol>' );
+          }
+          ?>
+      </nav>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>
+            Страница не найдена
+          </h2>
+          <p>
+            Запрашиваемая Вами страница не найдена
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="min-height: auto;" id="services-page" class="is-services__page">
+    <div class="container is-services__page-main">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="is-page__default-content">
+            <h2>Страница, которую вы хотели открыть не найдена на сайте!</h2>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'alabait' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'alabait' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'alabait' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$alabait_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'alabait' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$alabait_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>
