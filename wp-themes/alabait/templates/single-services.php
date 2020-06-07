@@ -16,7 +16,7 @@
           ?>
       </nav>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 is-content-page__template">
           <h2>
             <? the_title();?>
           </h2>
@@ -34,11 +34,31 @@
 
         </div>
         <div class="col-md-6">
-          <a class="is-video__fancy-video" data-fancybox href="<? echo get_field('services_item_video'); ?>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-              <div class="is-video__preview" style="background:url(<? echo get_field('services_item_video_preview'); ?>);"></div>
-              <div class="is-video__mask"></div>
-              <img class="is-video__play-button" src="/wp-content/themes/alabait/assets/img/video_play.png" alt="">
-          </a>
+          <?
+          $productVideoExists = get_field('services_item_video');
+          if ( $productVideoExists ) {
+            ?>
+            <a class="is-video__fancy-video" data-fancybox href="<? echo get_field('services_item_video'); ?>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                <div class="is-video__preview" style="background:url(<? echo get_field('services_item_video_preview'); ?>);"></div>
+                <div class="is-video__mask"></div>
+                <img class="is-video__play-button" src="/wp-content/themes/alabait/assets/img/video_play.png" alt="">
+            </a>
+          <? } else { ?>
+            <style >
+              .is-content-page__template p:nth-child(2), .is-content-page__template p:nth-child(4) {
+                display: none;
+              }
+
+              .is-content-page__template p:nth-child(3) {
+                margin-bottom: 4em;
+              }
+
+              .is-content-page__template .is-details__header__btn-buy {
+                margin-top: -4em;
+              }
+            </style>
+          <? }
+          ?>
         </div>
       </div>
     </div>
@@ -46,30 +66,52 @@
   <div id="sdetails-page" class="is-sdetails__page">
     <div class="is-sdetails__page-main container mb-5">
       <div class="row">
-        <div class="col-md-6">
-          <p class="is-sdetails__page-main-description">
-            <? echo get_field('services_item_description'); ?>
-          </p>
-          <div class="is-services__title-divider1">
-          </div>
-          <div class="is-services__title-divider2">
-          </div>
-          <div class="is-sdetails__page-main-features">
-            <?php while ( have_rows('services_item_bonuses') ) : the_row(); ?>
-              <p class="align-middle">
-                <span class="is-sdetails__page-main-icon">
-                  <img src="<? echo get_template_directory_uri().'/assets/img/ok.png' ?>" alt="">
-                </span>
-                <span class="is-sdetails__page-main-feature">
-                  <? echo get_sub_field('bonus_title'); ?>
-                </span>
+        <?
+          $bonusPackExists = get_field('services_support_pack');
+          if ( $bonusPackExists ) { ?>
+            <div class="col-md-6">
+              <? the_content(); ?>
+              <div class="is-services__title-divider1">
+              </div>
+              <div class="is-services__title-divider2">
+              </div>
+              <div class="is-sdetails__page-main-features">
+                <?php while ( have_rows('services_item_bonuses') ) : the_row(); ?>
+                  <p class="align-middle">
+                    <span class="is-sdetails__page-main-icon">
+                      <img src="<? echo get_template_directory_uri().'/assets/img/ok.png' ?>" alt="">
+                    </span>
+                    <span class="is-sdetails__page-main-feature">
+                      <? echo get_sub_field('bonus_title'); ?>
+                    </span>
+                  </p>
+        		    <?php endwhile; ?>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <? echo get_field('services_support_pack') ?>
+            </div>
+          <?  } else { ?>
+            <div class="col-md-6">
+              <p class="is-sdetails__page-main-description">
+                <? echo get_field('services_item_description'); ?>
               </p>
-    		    <?php endwhile; ?>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <? echo get_field('services_support_pack') ?>
-        </div>
+            </div>
+            <div class="col-md-6 is-sdetails__page-main-features" style="margin-top:0;">
+              <?php while ( have_rows('services_item_bonuses') ) : the_row(); ?>
+                <p class="align-middle">
+                  <span class="is-sdetails__page-main-icon">
+                    <img src="<? echo get_template_directory_uri().'/assets/img/ok.png' ?>" alt="">
+                  </span>
+                  <span class="is-sdetails__page-main-feature">
+                    <? echo get_sub_field('bonus_title'); ?>
+                  </span>
+                </p>
+              <?php endwhile; ?>
+            </div>
+          <?  }
+        ?>
+
       </div>
     </div>
     <div class="is-sdetails__page-other pb-5">

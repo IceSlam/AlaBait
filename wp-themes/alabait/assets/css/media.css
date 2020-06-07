@@ -30,6 +30,32 @@
     margin-bottom: 1em;
   }
 
+  .is-header__navbar-menu .nav-item {
+    max-width: 100%;
+    border-right: none;
+  }
+
+  .is-header__navbar-menu .dropdown-menu {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .is-header__navbar-menu .dropdown-menu .nav-item {
+    max-width: 100%;
+  }
+
+  .is-header__navbar-menu .dropdown-menu::after {
+    content: '';
+    border: 12px solid transparent;
+    border-bottom: 12px solid #CADAEA;
+    position: absolute;
+    border-radius: 4px;
+    width: 0;
+    top: -23px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
   #header .is-header__navbar-menu .nav-item .nav-link {
     border-right: none !important;
   }
