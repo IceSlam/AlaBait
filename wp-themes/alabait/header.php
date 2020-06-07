@@ -212,64 +212,26 @@
             </div>
           </div>
           <nav class="navbar navbar-expand-lg navbar-light is-header__navbar text-center" style="padding: 0;">
-            <a class="navbar-brand d-lg-none ml-2" href="#">Меню</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-              aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand d-lg-none ml-2" href="#" style="font-family:Montserrat,sans-serif;font-weight:400;">Меню</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#alabaitTopMenu"
+              aria-controls="alabaitTopMenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="basicExampleNav">
+            <?
+              wp_nav_menu( array(
+                  'theme_location'  => '',
+                  'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                  'container'       => 'div',
+                  'container_class' => 'collapse navbar-collapse',
+                  'container_id'    => 'alabaitTopMenu',
+                  'menu_class'      => 'navbar-nav mx-auto is-header__navbar-menu',
+                  'menu_id'         => 'alaBaiTopMenuList',
+                  'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                  'walker'          => new WP_Bootstrap_Navwalker(),
+              ) );
+            ?>
 
-              <ul class="navbar-nav mx-auto is-header__navbar-menu">
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    Главная
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    О компании
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    Продукты 1С
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    Продукты 1С и оборудование
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                      Услуги
-                    </a>
-                  <div class="dropdown-menu dropdown-primary"  aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Линия Консультаций 1С</a>
-                    <a class="dropdown-item" href="#">1С в облаке</a>
-                    <a class="dropdown-item" href="#">Аренда сервера</a>
-                    <a style="z-index: 1001;" class="dropdown-item" href="#">Сопровождение 1С</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    Кейсы и Антикейсы
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    Партнеры
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link nav-link-last">
-                    Поддержка
-                  </a>
-                </li>
-              </ul>
-            </div>
           </nav>
         </div>
     </header>

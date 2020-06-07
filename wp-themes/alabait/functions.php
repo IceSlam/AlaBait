@@ -129,16 +129,28 @@ if ( ! function_exists( 'alabait_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
+
+		add_theme_support('menus');
+
 		register_nav_menus(
 			array(
-				'headerMenu' => esc_html__( 'Верхнее меню', 'alabait' ),
-				'footerMenu' => esc_html__( 'Нижнее меню', 'alabait' ),
+				' headerMenu ' => esc_html__( 'Шапка', 'alabait' ),
+				' footerMenu ' => esc_html__( 'Подвал', 'alabait' ),
 			)
 		);
 
+		function register_navwalker(){
+			require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+		}
+		add_action( 'after_setup_theme', 'register_navwalker' );
 
-
-		add_theme_support('menus');
+		if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+    // File does not exist... return an error.
+    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // File exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
 
 		function remove_footer_admin () {
 		echo '<p>AlaBait Theme developed by <a href="https://github.com/IceSlam" target="_blank">IceSlam</a></p>';

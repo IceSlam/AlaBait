@@ -104,60 +104,25 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-light is-header__navbar text-center" style="padding: 0;">
 			<a class="navbar-brand d-lg-none ml-2" href="#">Меню</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-				aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#alaBaiBottomMenuList"
+				aria-controls="alaBaiBottomMenuList" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="basicExampleNav">
-				<ul class="navbar-nav mx-auto is-header__navbar-menu">
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							Главная
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							О компании
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							Продукты 1С
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							Продукты 1С и оборудование
-						</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-								Услуги
-							</a>
-						<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#">Линия Консультаций 1С</a>
-							<a class="dropdown-item" href="#">1С в облаке</a>
-							<a class="dropdown-item" href="#">Аренда сервера</a>
-							<a class="dropdown-item" href="#">Сопровождение 1С</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							Кейсы и Антикейсы
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link">
-							Партнеры
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="nav-link nav-link-last">
-							Поддержка
-						</a>
-					</li>
-				</ul>
+
+			<?
+				wp_nav_menu( array(
+						'theme_location'  => '',
+						'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+						'container'       => 'div',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'alaBaiBottomMenuList',
+						'menu_class'      => 'navbar-nav mx-auto is-header__navbar-menu',
+						'menu_id'         => 'alaBaiBottomMenuList',
+						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+				) );
+			?>
+
 		</nav>
 	</div>
 	<div style="border-top:2px solid rgba(255, 255, 255, 0.1);"></div>
@@ -207,7 +172,7 @@
 			</ul>
 			<ul class="navbar-nav mx-auto nav-flex-icons" style="margin-top: 0;">
 				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="<?php echo get_permalink(26);?>">
+					<a class="nav-link waves-effect waves-light" href="<? echo get_page_link( 550 ); ?>">
 						<i class="fas fa-search is-main__header-search-i" style="display: inline-block;"></i>
 						<span style="text-decoration: underline;">
 							Поиск по сайту

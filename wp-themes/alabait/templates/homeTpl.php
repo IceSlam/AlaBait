@@ -422,7 +422,7 @@ get_header();
             </h2>
           </div>
           <div class="col-sm-7 col-md-4 text-right">
-            <a href="<? echo get_category_link(6); ?>" class="btn is-services__title-btn">
+            <a href="<? echo get_page_link(390); ?>" class="btn is-services__title-btn">
               <span>
                 Перейти в раздел "Клиенты"
               </span>
