@@ -170,16 +170,16 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="navbar-nav mx-auto nav-flex-icons" style="margin-top: 0;">
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light" href="<? echo get_page_link( 550 ); ?>">
-						<i class="fas fa-search is-main__header-search-i" style="display: inline-block;"></i>
-						<span style="text-decoration: underline;">
-							Поиск по сайту
+			<div id="sb-search" class="sb-search">
+				<form>
+					<input class="sb-search-input" placeholder="Поиск по сайту" type="search" value="" name="search" id="search">
+					<input class="sb-search-submit" type="submit" value="">
+					<span class="sb-icon-search fas fa-search is-main__header-search-i">
+						<span style="font-family:Comfortaa;">
 						</span>
-					</a>
-				</li>
-			</ul>
+					</span>
+				</form>
+			</div>
 			<ul class="navbar-nav ml-auto nav-flex-icons is-main__header-soc" style="margin-top: 0;">
 				<li class="nav-item">
 					<a class="nav-link waves-effect waves-light">
@@ -255,39 +255,29 @@
 	<div id="order-call" uk-modal>
     <div style="padding:0;" class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical is-products__form">
 			<button class="uk-modal-close-outside" type="button" uk-close></button>
-			<form class="is-products__form-main" action="#!">
+			<div class="is-products__form-main">
 					<div style="position: relative;z-index:10;">
 						<p class="h4">
-							Есть вопросы? Закажите обратный звонок!
+							Есть вопросы?
 						</p>
 						<p class="capt">
 							Оставьте свои контактные данные и наш специалист свяжется с вами
 						</p>
-						<label for="is-form-name" style="margin-top: 0px;">Ваше имя*</label>
-						<input type="name" id="is-form-name" class="form-control" required>
-						<label for="is-form-name">Ваш номер телефона*</label>
-						<input type="phone" id="is-form-name" class="form-control" required>
-						<label for="is-form-textarea">Ваш вопрос*</label>
-						<textarea class="form-control" id="is-form-textarea" rows="2" required></textarea>
-						<div class="d-flex justify-content-center" style="margin-top: 16px;">
-							<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="privacyFeedbackCallModial" required>
-									<label style="max-width:none;padding-top:1em;" class="custom-control-label" for="privacyFeedbackCallModial"><a href="<? echo get_page_link(3); ?>">С политикой конфидициальных данных ознакомлен</a></label>
-							</div>
-							<button class="btn ml-auto mr-0" type="submit">Заказать звонок</button>
+							<?php echo do_shortcode('[contact-form-7 id="8" title="Обратный звонок"]'); ?>
 						</div>
+							<svg style="position: absolute;top:-25px;right:25px;z-index:5;" width="87" height="134" viewBox="0 0 116 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M48 128.5L44.25 88L45.5 86.75C61.5 86.4167 73.75 83.0833 82.25 76.75C90.9167 70.4167 95.25 61.8333 95.25 51C95.25 41.8333 91.9167 34.1667 85.25 28C78.5833 21.6667 69.75 18.5 58.75 18.5C41.9167 18.5 26.75 26.3333 13.25 42L0.5 29.75C16.5 10.4167 36.0833 0.749987 59.25 0.749987C75.9167 0.749987 89.4167 5.41665 99.75 14.75C110.083 24.0833 115.25 36.0833 115.25 50.75C115.25 65.5833 110.417 77.25 100.75 85.75C91.0833 94.0833 78.5833 99.3333 63.25 101.5L60.75 128.5H48ZM42.75 178V151.75H65.75V178H42.75Z" fill="#0A4472" fill-opacity="0.08"/>
+							</svg>
 					</div>
-					<svg style="position: absolute;top:1em;right:25px;z-index:5;" width="87" height="134" viewBox="0 0 116 178" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M48 128.5L44.25 88L45.5 86.75C61.5 86.4167 73.75 83.0833 82.25 76.75C90.9167 70.4167 95.25 61.8333 95.25 51C95.25 41.8333 91.9167 34.1667 85.25 28C78.5833 21.6667 69.75 18.5 58.75 18.5C41.9167 18.5 26.75 26.3333 13.25 42L0.5 29.75C16.5 10.4167 36.0833 0.749987 59.25 0.749987C75.9167 0.749987 89.4167 5.41665 99.75 14.75C110.083 24.0833 115.25 36.0833 115.25 50.75C115.25 65.5833 110.417 77.25 100.75 85.75C91.0833 94.0833 78.5833 99.3333 63.25 101.5L60.75 128.5H48ZM42.75 178V151.75H65.75V178H42.75Z" fill="#0A4472" fill-opacity="0.08"/>
-					</svg>
-					<p style="font-size:.75em;">* - поля, помеченные данным символом, являются обязательными для заполнения</p>
-			</form>
     </div>
 
 </div>
 </div>
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
+new UISearch( document.getElementById( 'sb-search' ) );
+</script>
 </body>
 
 </html>

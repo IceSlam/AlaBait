@@ -27,7 +27,7 @@
       <nav id="topnav" class="is-header__topnav navbar navbar-dark navbar-expand-lg">
           <div class="container">
             <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-            <ul style="margin-left:0em;" class="navbar-nav mr-auto justify-center text-center">
+            <ul style="margin-left:0em;" class="navbar-nav justify-content-between text-center">
               <li class="nav-item">
                 <a class="nav-link waves-effect waves-light"
                 href="
@@ -49,7 +49,7 @@
                   </span>
                 </a>
               </li>
-              <li class="nav-item" style="margin-left: 110px;">
+              <li class="nav-item">
                 <a class="nav-link waves-effect waves-light" href="mailto:<?
                 $alabait_email = get_option( 'alabait_email' );
                  if ($alabait_email) {
@@ -69,14 +69,26 @@
                 </a>
               </li>
             </ul>
+            <div id="sb-search" class="sb-search">
+              <form>
+                <input class="sb-search-input" placeholder="Поиск по сайту" type="search" value="" name="search" id="search">
+                <input class="sb-search-submit" type="submit" value="">
+                <span class="sb-icon-search fas fa-search is-main__header-search-i">
+                  <span style="font-family:Comfortaa;">
+                  </span>
+                </span>
+              </form>
+            </div>
             <ul class="navbar-nav mx-auto nav-flex-icons" style="margin-top: 0;">
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="/?s">
+
+
+                <!-- <a class="nav-link waves-effect waves-light" href="/?s">
                   <i class="fas fa-search is-main__header-search-i" style="display: inline-block;"></i>
                   <span style="text-decoration: underline;">
                     Поиск по сайту
                   </span>
-                </a>
+                </a> -->
               </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons is-main__header-soc" style="margin-top: 0;">

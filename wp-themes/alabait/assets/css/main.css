@@ -806,6 +806,24 @@ body {
   margin-top: 16px;
 }
 
+form.wpcf7-form {
+  z-index: 4;
+  position: relative;
+  border-radius: 1px;
+}
+
+form.wpcf7-form label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  color: #242424;
+  margin-bottom: 0px;
+  margin-top: 16px;
+  max-width: 250px;
+  font-size: .75em;
+}
+
 .is-products__form-main label:nth-child(2) {
 
 }
@@ -819,11 +837,30 @@ body {
   font-size: .75em;
 }
 
+input.wpcf7-text[type="text"], input.wpcf7-tel[type="tel"], textarea.wpcf7-textarea {
+  background: linear-gradient(180deg, rgba(204, 221, 233, 0.8) 0%, rgba(217, 232, 243, 0.8) 100%);
+  border: 2px solid #F3FAFF;
+  box-shadow: inset 0px 0px 6px #7EA5BE;
+  border-radius: 4px;
+  height: 32px;
+  font-size: .75em;
+  padding: .375rem .75rem !important;
+  transition: all .625s;
+}
+
 .is-products__form-main input[type="name"]:hover,.is-products__form-main input[type="phone"]:hover,.is-products__form-main textarea:hover {
   background: linear-gradient(180deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
   border: 2px solid #F3FAFF;
   box-shadow: inset 0px 0px 6px #7EA5BE;
   border-radius: 4px;
+}
+
+input.wpcf7-text[type="text"]:hover, input.wpcf7-tel[type="tel"]:hover, textarea.wpcf7-textarea:hover {
+  background: linear-gradient(180deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
+  border: 2px solid #F3FAFF;
+  box-shadow: inset 0px 0px 6px #7EA5BE;
+  border-radius: 4px;
+  transition: all .625s;
 }
 
 .is-products__form-main input[type="name"]:focus,.is-products__form-main input[type="phone"]:focus,.is-products__form-main textarea:focus {
@@ -833,7 +870,14 @@ body {
   border-radius: 4px;
 }
 
-.is-products__form-main textarea {
+input.wpcf7-text[type="text"]:focus, input.wpcf7-tel[type="tel"]:focus, textarea.wpcf7-textarea:focus {
+  border: 2px solid #FF8225;
+  background: linear-gradient(0deg, rgba(226, 240, 250, 0.8) 0%, rgba(221, 239, 251, 0.8) 100%);
+  box-shadow: inset 0px 0px 6px #FFFFFF;
+  border-radius: 4px;
+}
+
+.is-products__form-main textarea, textarea.wpcf7-textarea {
   height: 64px;
 }
 
@@ -858,12 +902,45 @@ body {
   transition: all 1.25s;
 }
 
+form.wpcf7-form .waves-input-wrapper.waves-effect.waves-light {
+  display: inline;
+}
+
+input.wpcf7-submit {
+  background: linear-gradient(84.45deg, #FF8225 3.04%, #FF6B22 99.99%);
+  box-shadow: 5px 10px 35px rgba(237, 121, 52, 0.3);
+  border-radius: 4px;
+  font-family: Montserrat,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 3px 10px rgba(24, 47, 68, 0.3);
+  height: 56px;
+  transition: all .625s;
+  border: 0px;
+}
+
 .is-products__form-main button:hover {
   background: linear-gradient(84.45deg, #FF8F3C 3.04%, #FF7835 99.99%);
   box-shadow: 5px 10px 35px rgba(237, 121, 52, 0.5);
   border-radius: 4px;
   color: #FFFFFF;
   transition: 1.25s;
+}
+
+input.wpcf7-submit:hover {
+  background: linear-gradient(84.45deg, #FF8F3C 3.04%, #FF7835 99.99%);
+  box-shadow: 5px 10px 35px rgba(237, 121, 52, 0.5);
+  border-radius: 4px;
+  color: #FFFFFF;
+  transition: all .625s;
 }
 
 .is-products__form-main .custom-checkbox label {
@@ -896,7 +973,10 @@ body {
     -webkit-box-shadow: inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
     -moz-box-shadow:    inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
     box-shadow:         inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
+}
 
+.is-form-agree-btn p {
+  margin-top: 0;
 }
 
 #company {
@@ -2413,4 +2493,61 @@ align-items: flex-end;
 
 #sdetails-page .is-cases__main-form {
   padding-bottom: 5em;
+}
+
+
+/* ExpandingSearchBar Styles */
+
+.sb-icon-search {
+  max-height: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.sb-search {
+  min-height: auto;
+  font-size: 1em;
+  max-height: 24px;
+  margin-top: 0;
+}
+
+.sb-search.sb-search-open {
+  max-width: 250px;
+  margin-top: 0;
+}
+
+.sb-search-input {
+  height: 24px;
+  background: transparent;
+  border: none !important;
+  width: 24px;
+}
+
+.sb-icon-search {
+  font-size: 1em;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #A9BDCD !important;
+  background: linear-gradient(180deg, #0A4472 0%, rgba(10, 68, 114, 0.2) 100%);
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(24, 47, 68, 1) !important;
+  border-radius: 4px;
+  padding: 4px 1px;
+  transition: all 2s;
+}
+
+.sb-icon-search::before {
+}
+
+.sb-search-submit {
+  height: 24px;
+}
+
+.sb-search.sb-search-open .sb-search-input {
+  width: 250px;
+  background: #fff;
+  font-size: .75em;
 }
