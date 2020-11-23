@@ -1,50 +1,30 @@
-# AlaBait Company Web Site Template
-> WordPress Theme for AlaBait Company - Center for automation of dairy and agro-industrial enterprises
+# Полигон22
 
-> Loc: Russia, Altaysky kray, Barnaul city
+WordPress-тема оформления сайта компании АлаБайт - Центр автоматизации молочных и агропромышленных предприятий
 
-> Web: http://alabait.ru
+## Инструкция по установке
 
-## Authors information
-Made by order of the Internet Agency Alliance+ Bryansk/Barnaul
+1. Перейти в папку с темами WordPress на вашем хостинге*:
 
-Design template: IA Alliance+
+  `cd /path/to/website/public/dir/wp-content/themes`
 
-Layout by: IceSlam
+2. При помощи консольной команды Git копируем тему из репозитория**:
 
-Coded for WP: IceSlam
+  `git clone https://gitlaunch.ru/iceslam/alabait.git`
 
-Production: IceSlam
+3. Выбрать тему из списка доступных: ПУ -> Внешний вид -> Темы -> Полигон22 -> Активировать
 
-## Code info
-1. HTML5
-1. CSS3
-1. ECMAScript 6
+---
 
-## Frameworks
-1. Twitter Bootstrap 4.4.1
-2. Material Design for Bootstrap 4.16
-3. UIKit 3.4
-4. FancyBox 3.5.1
+##### Информация о разработчике
 
+* Разработчик: [IceSlam](https://iceslam.ru/ "IceSlam")
+* Компания-разработчик: [ИА Альянс+](https://alianscompany.ru "Интернет-агентство Альянс+")
+* Версия: 1.0
+* Инструменты: Bootstrap 4.4.1, MDBootstrap 4.16.0, UIKit 3.4, FancyBox 3.5.7, FontAwesome 5.8.3, jQuery 3.4.1
 
-Theme builded for WordPress
+---
 
-## Live Demos
-* Layouts
-  * [AlaBait Home Page](http://alabait.iceslam.ru/)
-  * [AlaBait Partners Page](http://alabait.iceslam.ru/partners.html)
-  * [AlaBait Cases and Anti-Cases Page](http://alabait.iceslam.ru/cases.html)
-  * [AlaBait Services Page](http://alabait.iceslam.ru/services.html)
-  * [AlaBait Service Item details Page](http://alabait.iceslam.ru/sdetails.html)
-* Workable Theme
-  * [AlaBait - WordPress Home Page](http://wp.alabait.iceslam.ru/)
+*Считается, что доступ к серверу через терминал осуществляется посредством SSH-соединения с достаточными правами
 
-### Contacts
-IceSlam on [GitHub](https://github.com/IceSlam)
-
-IceSlam on [VK](https://vk.com/iceslam)
-
-IceSlam on [Telegram](https:/t.me/@IceSlam)
-
-IceSlam On [Web](https://iceslam.ru)
+**Дистрибутив Git уже установлен на сервере
