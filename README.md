@@ -10,7 +10,7 @@ WordPress-тема оформления сайта компании АлаБай
 
 2. При помощи консольной команды Git копируем тему из репозитория**:
 
-  `git clone https://gitlaunch.ru/iceslam/alabait.git`
+  `git clone https://github.com/iceslam/alabait.git`
 
 3. Выбрать тему из списка доступных: ПУ -> Внешний вид -> Темы -> Полигон22 -> Активировать
 
